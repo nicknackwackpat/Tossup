@@ -5,11 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
-    "start": "node index.js",
-    "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run start\" \"npm run client\""
-=======
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
@@ -18,7 +13,6 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
->>>>>>> 437fc968ea108e9110b5eb89b6c7fbd9204c26b1
   },
   "repository": {
     "type": "git",
