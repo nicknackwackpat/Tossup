@@ -1,7 +1,7 @@
 const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
-
+//localhost:300
 // API Routes
 router.use("/api", apiRoutes);
 
