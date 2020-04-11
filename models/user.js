@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const passportLocalMongoose = require('passport-local-mongoose');
- 
+
 const userSchema = new Schema({
 
   firstName: {
@@ -20,7 +20,7 @@ const userSchema = new Schema({
     trim: true,
     required: "States is Required"
   },
- 
+
   username: {
     type: String,
     trim: true,
@@ -45,8 +45,8 @@ const userSchema = new Schema({
     default: Date.now
   },
 
-  candidate1:  String,
-  candidate2:  String ,
+  candidate1: String,
+  candidate2: String,
   color: String
 
 });
