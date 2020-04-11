@@ -1,18 +1,65 @@
 import React, { Components } from "react";
-
-import React from 'react';
-import { Jumbotron, Container } from 'reactstrap';
+import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
+import { Jumbotron, Container } from "reactstrap";
 
 const Example = (props) => {
   return (
     <div>
       <Jumbotron fluid>
         <Container fluid>
-          <h1 className="display-3">Fluid jumbotron</h1>
-          <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          <h1 className="display-3">Welcome To Electorial College Drop Outs</h1>
+          <p className="lead">Please Log in !</p>
+          <InputGroup>
+            <Input placeholder="username" />
+            <InputGroupAddon addonType="append">
+              <InputGroupText>@example.com</InputGroupText>
+            </InputGroupAddon>
+          </InputGroup>
         </Container>
       </Jumbotron>
-    </div>
+   
+
+      <Form>
+       <FormGroup>
+          <Label for="exampleEmail">Input without validation</Label>
+          <Input />
+          <FormFeedback>You will not be able to see this</FormFeedback>
+          <FormText>Example help text that remains unchanged.</FormText>
+        </FormGroup>
+        <FormGroup>
+          <Label for="exampleEmail">Valid input</Label>
+          <Input valid />
+          <FormFeedback valid>Sweet! that name is available</FormFeedback>
+          <FormText>Example help text that remains unchanged.</FormText>
+        </FormGroup>
+        <FormGroup>
+          <Label for="examplePassword">Invalid input</Label>
+          <Input invalid />
+          <FormFeedback>Oh noes! that name is already taken</FormFeedback>
+          <FormText>Example help text that remains unchanged.</FormText>
+        </FormGroup>
+        <FormGroup>
+          <Label for="exampleEmail">Input without validation</Label>
+          <Input />
+          <FormFeedback tooltip>You will not be able to see this</FormFeedback>
+          <FormText>Example help text that remains unchanged.</FormText>
+        </FormGroup>
+        <FormGroup>
+          <Label for="exampleEmail">Valid input</Label>
+          <Input valid />
+          <FormFeedback valid tooltip>Sweet! that name is available</FormFeedback>
+          <FormText>Example help text that remains unchanged.</FormText>
+        </FormGroup>
+        <FormGroup>
+          <Label for="examplePassword">Invalid input</Label>
+          <Input invalid />
+          <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback>
+          <FormText>Example help text that remains unchanged.</FormText>
+        </FormGroup>
+      </Form>
+      </div>
+    );
+  }
   );
 };
 

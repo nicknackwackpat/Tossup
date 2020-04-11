@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // requires the model with Passport-Local Mongoose plugged in
-const User = require('./models/user');
+//const User = require('./models/user');
  
 // use static authenticate method of model in LocalStrategy
 passport.use(new LocalStrategy(User.authenticate()));
