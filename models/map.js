@@ -12,7 +12,7 @@ state: {
     trim: true,
     required: "States is Required"
   },
-  
+
   votercount: Number,
   color: String
 
