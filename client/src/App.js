@@ -1,7 +1,9 @@
 import React from "react";
-import Navbar from "./components/Navbar/navbar.js";
+import TopMenu from "./components/Navbar/navbar.js";
+// import SearchAppBar from "./components/Navbar/NavMUI.js";
 // import { BrowserRouter, Route, Switch } from "react-router-dom";
 
+// BrowserRouter instructions
 // The app will not render correctly until you setup a Route component.
 // Refer to the Basic Example documentation if you need to.
 // (https://reacttraining.com/react-router/web/example/basic)
@@ -9,7 +11,8 @@ function App() {
   return (
     // <BrowserRouter>
     <div>
-    <Navbar />
+      {/* <SearchAppBar /> */}
+    <TopMenu />
     </div>
 
     // </BrowserRouter>
