@@ -27,18 +27,6 @@ const userSeed = [
 ];
 
 
-<<<<<<< HEAD
-    // .remove({})
-    .then(() => db.User.collection.insertMany(userSeed))
-    .then(data => {
-        console.log(data.result.n + " records inserted!");
-        process.exit([]);
-    })
-    // .catch(err => {
-    //     console.error(err);
-    //     process.exit(1);
-    // });
-=======
  db.User.deleteMany({})
     .then(() => db.User.collection.insertMany(userSeed))
     .then(data => {
@@ -49,4 +37,3 @@ const userSeed = [
         console.error(err);
         process.exit(1);
     });
->>>>>>> 19f5c7be9d18862529c809290f836a1b8d6409e0
