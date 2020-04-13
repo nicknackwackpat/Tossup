@@ -4,8 +4,7 @@ import {
   Navbar,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
+  NavbarToggler,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -21,7 +20,7 @@ const TopMenu= (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Tossup</NavbarBrand>
+        <NavbarBrand href="/">TossUp</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
