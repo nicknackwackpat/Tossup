@@ -1,6 +1,7 @@
 import React from "react";
 import TopMenu from "./components/Navbar/navbar.js";
-import Jumbotron from "./components/Jumbotron/jumbotron.js"
+import Carousel from "./components/Carousel/Carousel.js"
+// import Header from "./components/Header/Header.js"
 
 // import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -14,7 +15,7 @@ function App() {
     // <BrowserRouter>
     <div>
     <TopMenu />
-    <Jumbotron />
+    <Carousel />
     </div>
 
     // </BrowserRouter>
