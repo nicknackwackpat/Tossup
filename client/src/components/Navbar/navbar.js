@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import {
   Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
+  NavbarToggler,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -14,7 +12,7 @@ import {
   NavbarText
 } from 'reactstrap';
 
-const Navbar = (props) => {
+const TopMenu= (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -22,31 +20,31 @@ const Navbar = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <NavbarBrand href="/">TossUp</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+            {/* <NavItem>
+              <NavLink href="/components/">View Profile</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
+              <NavLink href="">Run Election</NavLink>
+            </NavItem> */}
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
+                  View Profile
                 </DropdownItem>
                 <DropdownItem>
-                  Option 2
+                  Run an Election!
                 </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
+                {/* <DropdownItem divider /> */}
+                {/* <DropdownItem>
                   Reset
-                </DropdownItem>
+                </DropdownItem> */}
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
@@ -57,4 +55,4 @@ const Navbar = (props) => {
   );
 }
 
-export default Navbar;
+export default TopMenu;

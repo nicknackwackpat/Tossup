@@ -1,7 +1,7 @@
 import React from 'react';
 import { Jumbotron, Container } from 'reactstrap';
 
-const Welcome = (props) => {
+const Header = (props) => {
   return (
     <div>
       <Jumbotron fluid>
@@ -14,4 +14,4 @@ const Welcome = (props) => {
   );
 };
 
-export default Welcome;
+export default Header;

@@ -5,14 +5,17 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "d3": "^5.15.1",
+    "d3-scale": "^3.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "topojson-client": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts src",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
