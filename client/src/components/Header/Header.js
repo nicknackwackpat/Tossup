@@ -1,6 +1,8 @@
 import React from 'react';
 import { Jumbotron, Container } from 'reactstrap';
 
+// This is the header for all pages except the Home page!
+
 const Header = (props) => {
   return (
     <div>
