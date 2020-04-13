@@ -26,13 +26,13 @@ app.use(express.json());
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("client/src"));
 }
 // Add routes, both API and view
 app.use(routes);
 
 app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/src/index.html"));
 });
 
 // Connect to the Mongo DB
