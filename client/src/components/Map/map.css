@@ -1,12 +1,13 @@
-/* h1 {
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        text-transform: uppercase;
-        text-align: center;
-        text-decoration: wavy;
-        color: purple;
-    }
-
 path {
+    pointer-events: all;
+  }
+
+path:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+/* path {
   fill: #ccc;
   stroke: #fff;
   stroke-linejoin: round;
