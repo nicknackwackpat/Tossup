@@ -5,12 +5,15 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "d3": "^5.15.1",
     "d3-scale": "^3.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
+    "react-usa-map": "^1.4.0",
+    "reactstrap": "^8.4.1",
     "topojson-client": "^3.1.0"
   },
   "scripts": {
