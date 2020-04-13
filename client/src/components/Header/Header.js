@@ -2,7 +2,7 @@ import React, { Components } from "react";
 import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
 import { Jumbotron, Container } from "reactstrap";
 
-const Example = (props) => {
+const Header = (props) => {
   return (
     <div>
       <Jumbotron fluid>
@@ -18,7 +18,7 @@ const Example = (props) => {
         </Container>
       </Jumbotron>
    
-
+{/* 
       <Form>
        <FormGroup>
           <Label for="exampleEmail">Input without validation</Label>
@@ -56,11 +56,11 @@ const Example = (props) => {
           <FormFeedback tooltip>Oh noes! that name is already taken</FormFeedback>
           <FormText>Example help text that remains unchanged.</FormText>
         </FormGroup>
-      </Form>
+      </Form> */}
       </div>
     );
   }
   );
 };
 
-export default Example;
+export default Header;

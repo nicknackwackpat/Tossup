@@ -1,0 +1,17 @@
+h1 {
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: wavy;
+        color: purple;
+    }
+
+path {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+path:hover {
+	fill-opacity: .7;
+}

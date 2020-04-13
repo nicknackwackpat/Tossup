@@ -1,8 +1,6 @@
 const router = require("express").Router();
 const userController = require("../../controllers/userController");
 
-//localhost:3000/api/map
-// Matches with "/api/map"
 router.route("/")
 
   .get(userController.findAll)
