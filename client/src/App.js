@@ -1,9 +1,9 @@
-// import React from "react";
-// import TopMenu from "./components/Navbar/navbar.js";
-// import Carousel from "./components/Carousel/Carousel.js"
-// // import Header from "./components/Header/Header.js"
-// // import Footer from "./components/Footer/Footer.js"
-// import Map from "./components/Map/map.js";
+import React from 'react';
+import TopMenu from "./components/Navbar/navbar.js";
+import Carousel from "./components/Carousel/Carousel.js"
+// import Header from "./components/Header/Header.js"
+import Map from "./components/Map/Map.js";
+
 
 // import CandidatePage from " ./client/srs/pages/page.js"
 // import ElectionPage from " ./client/srs/pages/Electionpage.js"
