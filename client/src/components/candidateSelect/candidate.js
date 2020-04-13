@@ -7,7 +7,7 @@ const Candidate = (props)=> {
         <h1>Needs work</h1>
         </div>
     );
-    
+
 };
 
 
