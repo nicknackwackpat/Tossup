@@ -3,6 +3,7 @@ import TopMenu from "./components/Navbar/navbar.js";
 import Carousel from "./components/Carousel/Carousel.js"
 // import Header from "./components/Header/Header.js"
 import Map from "./components/Map/map.js";
+import Signup from "./components/Signup/Signup.js";
 
 
 // import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -19,6 +20,7 @@ function App() {
     <TopMenu />
     <Carousel />
     <Map />
+    <Signup />
     </div>
 
     // </BrowserRouter>
