@@ -5,6 +5,10 @@ import Carousel from "./components/Carousel/Carousel.js"
 import Map from "./components/Map/Map.js";
 import Candidate from './components/candidateSelect/candidate.js';
 // import Candidate from "./components/candidateSelect";
+import Map from "./components/Map/map.js";
+import Signup from "./components/Login/Signup.js";
+import Login from "./Pages/LoginPage.js";
+
 
 
 // import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -18,10 +22,11 @@ function App() {
   return (
     // <BrowserRouter>
     <div>
-    <TopMenu />
+    {/* <TopMenu />
     <Carousel />
     <Map />
     <Candidate />
+    <Login /> */}
     </div>
 
     // </BrowserRouter>
