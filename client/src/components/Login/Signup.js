@@ -1,4 +1,4 @@
-// How does this work with layout? Do I just add classes?
+// This file routes into Expander.js
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
@@ -8,11 +8,11 @@ const Signup = (props) => {
     <div style={{display:"flex"}}>
       <FormGroup>
         <Label for="exampleFirstName">First Name</Label>
-        <Input type="password" name="password" id="examplePassword" placeholder="FirstName placeholder" />
+        <Input placeholder="First Name" />
       </FormGroup>
       <FormGroup>
         <Label for="exampleLastName">Last Name</Label>
-        <Input type="password" name="password" id="examplePassword" placeholder="LastName placeholder" />
+        <Input placeholder="Last Name" />
       </FormGroup>
       </div>
       <div style={{display:"flex"}}>
