@@ -1,27 +1,14 @@
 import React from 'react';
-import TopMenu from "./components/Navbar/Navbar.js";
-
+import TopMenu from "../components/Navbar/Navbar.js";
 
 
 function CandidatePage (){
-    return ("Hello World !!! ");
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return (
+        <div>
+    <TopMenu />
+        </div>
+    )}
 
 
 
 export default CandidatePage;
- 

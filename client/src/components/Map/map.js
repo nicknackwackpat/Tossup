@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./map.css";
+import "./Map.css";
 import USAMap from "react-usa-map";
 // import Candidate from "candidate.js";
 // import d3 from 'd3';
@@ -15,13 +15,8 @@ class Map extends Component {
   // getStateNames = (event) => {
   //   const stateArray = [];
 
-<<<<<<< HEAD
-    for (let i = 0; i < stateArray.length; i++) {
-      let stateName = event.target.dataset.name;
-=======
   //   for (let i = 0; i < stateArray.length; i++) {
   //     let stateName = event.target.dataset.name;
->>>>>>> aab62a9edfbf9ffed04eac8fdbd46566f046f5e6
 
   //     stateName.push(stateArray);
   //   }
