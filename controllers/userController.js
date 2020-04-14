@@ -37,7 +37,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
-  // Update your account --not for MVC
+  // Update your account --not for MVP
   // update: function(req, res) {
   //   db.User
   //     .findOneAndUpdate({ _id: req.params.id }, req.body)
@@ -45,7 +45,7 @@ module.exports = {
   //     .catch(err => res.status(422).json(err));
   // },
 
-// Delete your account --not for MVC
+// Delete your account --not for MVP
   // remove: function(req, res) {
   //   db.User
   //     .findById({ _id: req.params.id })
