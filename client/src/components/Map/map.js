@@ -1,22 +1,50 @@
-import React, { Component } from 'react';
-import './map.css';
+import React, { Component } from "react";
+import "./map.css";
 import USAMap from "react-usa-map";
+// import Candidate from "candidate.js";
+// import d3 from 'd3';
+import data from "./data/us-states.js";
 
 class Map extends Component {
 
   mapHandler = (event) => {
+    console.log(data);
     alert(event.target.dataset.name);
   };
 
-  /* optional customization of filling per state and calling custom callbacks per state */
+  // getStateNames = (event) => {
+  //   const stateArray = [];
+
+  //   for (let i = 0; i < stateArray.length; i++) {
+  //     let stateName = event.target.dataset.name;
+
+  //     stateName.push(stateArray);
+  //   }
+  //   console.log(stateArray);
+  // };
+
+  // getStateVotes = () => {
+  //   this.getStateNames();
+
+  //   let voteTotal = 100;
+  //   let candidate1 = "Johnny Bravo";
+  //   let candidate2 = "Kim Possible";
+
+
+  // };
+
   statesCustomConfig = () => {
     return {
-      "NJ": {
+      NJ: {
         fill: "navy",
-        clickHandler: (event) => console.log('Custom handler for NJ', event.target.dataset)
+        clickHandler: (event) =>
+          console.log("Custom handler for NJ", event.target.dataset),
       },
-      "NY": {
-        fill: "#CC0000"
+      NY: {
+        fill: "#CC0000",
+      },
+      PA: {
+        fill: "#CC0000",
       }
     };
   };
@@ -24,7 +52,11 @@ class Map extends Component {
   render() {
     return (
       <div className="map">
-        <USAMap customize={this.statesCustomConfig()} onClick={this.mapHandler} />
+        <USAMap
+          title={"TossUp"}
+          customize={this.statesCustomConfig()}
+          onClick={this.mapHandler}
+        />
       </div>
     );
   }

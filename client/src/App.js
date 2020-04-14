@@ -4,6 +4,9 @@ import TopMenu from "./components/Navbar/navbar.js";
 import Carousel from "./components/Carousel/Carousel.js";
 // import Header from "./components/Header/Header.js";
 import Map from "./components/Map/Map.js";
+// import Signup from "./components/Login/Signup.js";
+import Login from "./Pages/LoginPage.js";
+
 
 
 
@@ -16,6 +19,15 @@ import Map from "./components/Map/Map.js";
 // //import Navbar from "./components/Navbar/Navbar.js";
 
 // // import { BrowserRouter, Route, Switch } from "react-router-dom";
+// function App() {
+//   return (
+//     // <BrowserRouter>
+//     <div>
+//     <TopMenu />
+//     <Carousel />
+//     <Map />
+//     <Login />
+//     </div>
 
 // // BrowserRouter instructions
 // // The app will not render correctly until you setup a Route component.
