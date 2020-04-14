@@ -2,32 +2,36 @@ import React, { Component } from "react";
 import "./map.css";
 import USAMap from "react-usa-map";
 // import Candidate from "candidate.js";
+// import d3 from 'd3';
+import data from "./data/us-states.js";
 
 class Map extends Component {
+
   mapHandler = (event) => {
+    console.log(data);
     alert(event.target.dataset.name);
   };
 
-  getStateNames = (event) => {
-    const stateArray = [];
+  // getStateNames = (event) => {
+  //   const stateArray = [];
 
-    for (i = 0; i < stateArray.length; i++) {
-      let stateName = event.target.dataset.name;
+  //   for (let i = 0; i < stateArray.length; i++) {
+  //     let stateName = event.target.dataset.name;
 
-      stateName.push(stateArray);
-    }
-    console.log(stateArray);
-  };
+  //     stateName.push(stateArray);
+  //   }
+  //   console.log(stateArray);
+  // };
 
-  getStateVotes = () => {
-    this.getStateNames();
+  // getStateVotes = () => {
+  //   this.getStateNames();
 
-    let voteTotal = 100;
-    let candidate1 = "Johnny Bravo";
-    let candidate2 = "Kim Possible";
+  //   let voteTotal = 100;
+  //   let candidate1 = "Johnny Bravo";
+  //   let candidate2 = "Kim Possible";
 
 
-  };
+  // };
 
   statesCustomConfig = () => {
     return {
@@ -39,6 +43,9 @@ class Map extends Component {
       NY: {
         fill: "#CC0000",
       },
+      PA: {
+        fill: "#CC0000",
+      }
     };
   };
 
@@ -46,6 +53,7 @@ class Map extends Component {
     return (
       <div className="map">
         <USAMap
+          title={"TossUp"}
           customize={this.statesCustomConfig()}
           onClick={this.mapHandler}
         />
