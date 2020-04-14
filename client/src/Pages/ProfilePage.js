@@ -2,13 +2,14 @@ import React from 'react';
 import TopMenu from "../components/Navbar/Navbar.js";
 import Header from "../components/Header/Header.js";
 
-function ProfilePage (){
+function ProfilePage () {
+    
     return(
-        <main>
+        <div>
         <TopMenu />
         <Header />
 
-        </main>
+        </div>
     );
 }
 
