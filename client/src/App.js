@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import TopMenu from "./components/Navbar/navbar.js";
+import TopMenu from "./components/Navbar/Navbar.js";
 import Carousel from "./components/Carousel/Carousel.js";
 // import Header from "./components/Header/Header.js";
 import Map from "./components/Map/Map.js";
@@ -44,7 +44,7 @@ import Login from "./Pages/LoginPage.js";
               <Route exact path ="/ElectionPage">
                  <ElectionPage/>
               </Route>
-              <Route exact path ="/LoginPage">
+              <Route exact path ="/">
                 <LoginPage/>
               </Route >
               <Route exact path = "/ProfilePage">
