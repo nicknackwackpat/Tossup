@@ -1,27 +1,16 @@
 import React from 'react';
-import TopMenu from "./../components/Navbar/Navbar.js";
+import TopMenu from "../components/Navbar/Navbar.js";
+import Header from "../components/Header/Header.js";
 
+function ProfilePage () {
+    
+    return(
+        <div>
+        <TopMenu />
+        <Header />
 
-
-function ProfilePage (){
-    return ("Hello World  Profile !!! ");
+        </div>
+    );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default ProfilePage;
- 

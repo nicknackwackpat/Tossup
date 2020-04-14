@@ -10,12 +10,6 @@ const Header = (props) => {
         <Container fluid>
           <h1 className="display-3">Welcome To TossUp</h1>
           <p className="lead">Please Log in !</p>
-          <InputGroup>
-            <Input placeholder="username" />
-            <InputGroupAddon addonType="append">
-              <InputGroupText>@example.com</InputGroupText>
-            </InputGroupAddon>
-          </InputGroup>
         </Container>
       </Jumbotron>
       </div>
