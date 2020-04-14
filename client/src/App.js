@@ -27,21 +27,21 @@ import Map from "./components/Map/Map.js";
        <Router>
         <div>
           <Switch>
-              <Route exact path ={["/", "/CandidatePage"]}> */}
+              <Route exact path = "/CandidatePage"> 
               </Route>
-              <Route exact path ="./ElectionPage">
+              <Route exact path ="/ElectionPage">
                  <ElectionPage/>
               </Route>
-              <Route>
+              <Route exact path ="/LoginPage">
                 <LoginPage/>
-              </Route>
-              <Route>
+              </Route >
+              <Route exact path = "/ProfilePage">
                 <ProfilePage/>
               </Route>
-              <Route>
+              <Route exact path = "/ResultsPage">
                 <ResultsPage/>
               </Route>
-              <Route>
+              <Route exact path = "/SignUpPage">
                 <SignUpPage/> 
              </Route> 
             </Switch>
