@@ -12,7 +12,6 @@ function LoginPage() {
     <br />
     <LoginForm />  <SignupExpander />
     </div>
-
   );
 }
 
