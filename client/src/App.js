@@ -3,6 +3,8 @@ import TopMenu from "./components/Navbar/navbar.js";
 import Carousel from "./components/Carousel/Carousel.js"
 // import Header from "./components/Header/Header.js"
 import Map from "./components/Map/Map.js";
+import Candidate from './components/candidateSelect/candidate.js';
+// import Candidate from "./components/candidateSelect";
 
 
 // import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -19,6 +21,7 @@ function App() {
     <TopMenu />
     <Carousel />
     <Map />
+    <Candidate />
     </div>
 
     // </BrowserRouter>
