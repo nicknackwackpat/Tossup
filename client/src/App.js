@@ -2,7 +2,10 @@ import React from 'react';
 import TopMenu from "./components/Navbar/navbar.js";
 import Carousel from "./components/Carousel/Carousel.js"
 // import Header from "./components/Header/Header.js"
-import Map from "./components/Map/Map.js";
+import Map from "./components/Map/map.js";
+import Signup from "./components/Login/Signup.js";
+import Login from "./Pages/LoginPage.js";
+
 
 
 // import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -16,9 +19,10 @@ function App() {
   return (
     // <BrowserRouter>
     <div>
-    <TopMenu />
-    <Carousel />
-    <Map />
+    {/* <TopMenu /> */}
+    {/* <Carousel /> */}
+    {/* <Map /> */}
+    <Login />
     </div>
 
     // </BrowserRouter>

@@ -1,0 +1,5 @@
+.caro {
+    max-height: 100px!important;
+}
+
+.carousel.slide img{max-height:420px!important}
