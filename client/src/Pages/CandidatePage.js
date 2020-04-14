@@ -10,9 +10,4 @@ function CandidatePage (){
 
 
 
-<<<<<<< HEAD
 export default CandidatePage;
- 
-=======
-export default CandidatePage;
->>>>>>> 0247501e7dbc52cb395bc53149cdbdca8789fdef
