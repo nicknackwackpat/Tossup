@@ -27,6 +27,12 @@ const userSchema = new Schema({
     required: "Password is Required",
     validate: [({ length }) => length >= 6, "Password should be longer."]
   },
+
+  elections:[{
+    type: Schema.Types.ObjectId,
+    ref: "Election"
+  }],
+
   userCreated: {
     type: Date,
     default: Date.now
