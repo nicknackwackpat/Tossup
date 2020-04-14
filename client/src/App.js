@@ -27,10 +27,10 @@ import Map from "./components/Map/Map.js";
        <Router>
         <div>
           <Switch>
-              <Route exact path ={["/", "/CandidatePage"]}>
+              <Route exact path ={["/", "/CandidatePage"]}> */}
               </Route>
               <Route exact path ="./ElectionPage">
-                <ElectionPage/>
+                 <ElectionPage/>
               </Route>
               <Route>
                 <LoginPage/>
@@ -42,8 +42,8 @@ import Map from "./components/Map/Map.js";
                 <ResultsPage/>
               </Route>
               <Route>
-                <SignUpPage/>
-              </Route>
+                <SignUpPage/> 
+             </Route> 
             </Switch>
           </div>
          </Router>

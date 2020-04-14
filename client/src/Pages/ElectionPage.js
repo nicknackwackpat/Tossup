@@ -1,10 +1,14 @@
 import React from 'react';
-import TopMenu from "./components/Navbar/Navbar.js";
+import TopMenu from "../components/Navbar/navbar.js";
 
 
 
 function ElectionPage (){
-    return ("");
+
+    return(
+        <TopMenu />
+    );
+    
 }
 
 
