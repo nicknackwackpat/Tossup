@@ -5,9 +5,9 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 const Signup = (props) => {
   return (
     <Form style={{display:"flex", flexDirection:"column"}}>
-    <div style={{display:"flex"}}>
+    <div id="formE" style={{display:"flex"}}>
       <FormGroup>
-        <Label for="exampleFirstName">First Name</Label>
+        <Label for="exampleFirstName" >First Name</Label>
         <Input placeholder="First Name" />
       </FormGroup>
       <FormGroup>

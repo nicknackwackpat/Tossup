@@ -1,3 +1,12 @@
+svg {
+    margin: auto;
+    padding: 45px 25px;;
+    display: flex;
+    justify-content: center;
+    height: 1350px;
+    width: 1350px;
+}
+
 path {
     pointer-events: all;
   }
