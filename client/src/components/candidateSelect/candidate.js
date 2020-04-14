@@ -1,28 +1,32 @@
 import React from "react";
-import "../candidateSelect/style.css";
+import "./style.css";
 
 const Candidate = (props) => {
+const onChangeHandler = (e)=>{
+    console.log(e.target.value);
+    console.log("change happened");
+}
 
     return (
-        <div class="row2">
+        <div className="row2">
 
-            <select id="colorselector">
+            <select id="colorselector" onChange={onChangeHandler}>
                 <option value="106" data-color="#A0522D">sienna</option>
-                <option value="47" data-color="#CD5C5C" selected="selected">indianred</option>
+                <option value="47" data-color="#CD5C5C">indianred</option>
                 <option value="87" data-color="#FF4500">orangered</option>
                 <option value="15" data-color="#DC143C">crimson</option>
                 <option value="24" data-color="#FF8C00">darkorange</option>
                 <option value="78" data-color="#C71585">mediumvioletred</option>
             </select>
 
-            <div class="col-4">
+            <div className="col-4">
 
 
-                <div class="input-group">
-                    <div class="input-group-prepend"></div>
+                <div className="input-group">
+                    <div className="input-group-prepend"></div>
                     <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
                     />
@@ -32,11 +36,11 @@ const Candidate = (props) => {
                 <br />
 
 
-                <div class="input-group">
-                    <div class="input-group-prepend"></div>
+                <div className="input-group">
+                    <div className="input-group-prepend"></div>
                     <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
                     />
@@ -86,10 +90,6 @@ const Candidate = (props) => {
     );
 
 };
-
-
-
-
 
 
 export default Candidate;
