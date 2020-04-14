@@ -15,7 +15,7 @@ class Map extends Component {
   // getStateNames = (event) => {
   //   const stateArray = [];
 
-  //   for (i = 0; i < stateArray.length; i++) {
+  //   for (let i = 0; i < stateArray.length; i++) {
   //     let stateName = event.target.dataset.name;
 
   //     stateName.push(stateArray);
