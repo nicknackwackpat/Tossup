@@ -23,16 +23,17 @@ const electionSchema = new Schema({
                 votes: Number
             }],
 
-            NJ: [{
-                name: String,
-                votes: Number
-            }]
-    }
-    }],
+    candidatename: {
+      type: String, 
+      required: true
 
-});
+    },
+      electionstate: Number,
+      color: String
+    
+    });
+    
+    const Election = mongoose.model("Election", electionSchema);
 
-
-const Election = mongoose.model("Election", electionSchema);
 
 module.exports = Election;

@@ -4,6 +4,38 @@ const data = require("../client/src/components/Map/data/us-states.json")
 
 const candidateArray = ["Amy", "Joe", "Nelson", "Nick"];
 
+mongoose.connect(
+    process.env.MONGODB_URI || 
+    "mongodb://localhost/project3", {
+        useNewUrlParser: true,
+        useFindAndModify: false
+    }
+);
+
+const election = [
+    {
+        candidate = [
+            {
+                name: "bill",
+                color: "Green",
+                vote: 0
+            },
+            {
+                name: "Jon",
+                color: "Red",
+                votes: 0
+            },
+            results = [
+                {
+                    name: "NY",
+                    votes: 0
+                },
+                {
+                    name: "New Jersey",
+                    votes: 0
+                }
+            ]
+        ]
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {

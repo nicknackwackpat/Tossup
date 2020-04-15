@@ -10,7 +10,7 @@ const onChangeHandler = (e)=>{
     return (
         <div className="row2">
 
-            <select id="colorselector" onChange={onChangeHandler}>
+            <select id="colorselector" onChange={onChangeHandler} {...props}>
                 <option value="106" data-color="#A0522D">sienna</option>
                 <option value="47" data-color="#CD5C5C">indianred</option>
                 <option value="87" data-color="#FF4500">orangered</option>
@@ -29,7 +29,7 @@ const onChangeHandler = (e)=>{
                         className="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
-                    />
+                     />
                 </div>
 
 
@@ -43,7 +43,7 @@ const onChangeHandler = (e)=>{
                         className="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
-                    />
+                     />
                 </div>
 
 
@@ -57,7 +57,7 @@ const onChangeHandler = (e)=>{
                         class="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
-                    />
+                        />
                 </div>
 
 
@@ -71,7 +71,7 @@ const onChangeHandler = (e)=>{
                         class="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
-                    />
+                         />
                 </div>
 
 
