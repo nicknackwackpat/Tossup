@@ -10,8 +10,9 @@ function CandidatePage (){
     
     return (
         <div>
-    <TopMenu />
     <Candidate />
+    <TopMenu />
+   
         </div>
     )}
 
