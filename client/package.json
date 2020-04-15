@@ -8,6 +8,7 @@
     "bootstrap": "^4.4.1",
     "d3": "^5.15.1",
     "d3-scale": "^3.2.1",
+    "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
