@@ -26,7 +26,7 @@ const Signup = (props) => {
       </FormGroup>
       </div>
     {/* </div> */}
-      {/* <FormGroup>
+      <FormGroup>
         <Label for="exampleSelect">Select</Label>
         <Input type="select" name="select" id="exampleSelect">
           <option>1</option>
@@ -35,7 +35,7 @@ const Signup = (props) => {
           <option>4</option>
           <option>5</option>
         </Input>
-      </FormGroup> */}
+      </FormGroup>
       
       <Button>Submit</Button>
     </Form>

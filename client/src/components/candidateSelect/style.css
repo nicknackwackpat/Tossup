@@ -1,0 +1,20 @@
+  
+  .jumbotron {
+    height: 220px;
+    text-align: center;
+    color: black;
+    border-radius: 0;
+    border-bottom: 10px solid black;
+  }
+
+  #startBtn{
+    margin-left: 540px;
+    
+    margin-bottom: 20px;
+  }
+  
+  #colorselector{
+    margin-left: 550px;
+    margin-top: 20px;
+  
+  }
