@@ -38,13 +38,16 @@ for (state in data){
     newState.candidates = [];
     shuffle(candidateArr)
     candidateArr.forEach((candidate, i)=>{
-        newState.candidates.push(Math.floor(Math.random() * totalPopulation))
-        totalPopulation-=newState.candidates[i]
+        newState.candidates.push({
+            name: candidate,
+            voteTotal: Math.floor(Math.random() * totalPopulation)
+        })
+        totalPopulation-=newState.candidates[i].voteTotal
     })
     electionSeed.push(newState)
 };
 
-console.log(electionSeed)
+console.log(electionSeed[10].candidates)
 }
 vote(candidateArray)
  
