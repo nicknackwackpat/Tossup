@@ -15,4 +15,22 @@ function ElectionPage (){
     
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default ElectionPage;
+ 
+
