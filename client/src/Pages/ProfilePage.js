@@ -2,8 +2,7 @@ import React from 'react';
 import TopMenu from "../components/Navbar/Navbar.js";
 import Header from "../components/Header/Header.js";
 
-function ProfilePage () {
-    
+function ProfilePage() {
     return(
         <div>
         <TopMenu />
@@ -11,7 +10,8 @@ function ProfilePage () {
 
         </div>
     );
-}
+};
+export default ProfilePage
 
 
 
