@@ -18,12 +18,29 @@ class Map extends Component {
 
   componentDidMount() {
     API.getResults().then(res => {
-      console.log(res.data)
-      this.setState({ results: res.data })
+      const electionResults = res.data;
+      // console.log(res.data)
+      const electionResultsWithWinner = electionResults.map((stateResults)=> {
+        let winner = {
+          name: "",
+          voteTotal: 0
+        }
+
+        stateResults.candidates.forEach(candidate => {
+          if (winner.voteTotal < candidate.voteTotal) {
+            winner = candidate;
+          }
+        })
+        stateResults.winner = winner
+        return stateResults
+      })
+      console.log(electionResultsWithWinner);
+      this.setState({ results: electionResultsWithWinner })
     }).catch(err => {
       console.log(err);
     });
   }
+
 
   statesCustomConfig = () => {
     return {
@@ -51,7 +68,7 @@ class Map extends Component {
         />
       </div>
     );
-  }
+}
 }
 
 export default Map;
