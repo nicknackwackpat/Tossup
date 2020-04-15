@@ -1,8 +1,8 @@
 import React from "react";
 import TopMenu from "../components/Navbar/navbar.js";
-import Carousel from "../components/Carousel/Carousel.js"
-import LoginForm from "../components/Login/Login.js"
-import SignupExpander from "../components/Login/Expander.js"
+import Carousel from "../components/Carousel/carousel.js"
+import LoginForm from "../components/Login/login.js"
+import SignupExpander from "../components/Login/expander.js"
 import Footer from "../components/Footer/footer.js"
 
 function LoginPage() {
