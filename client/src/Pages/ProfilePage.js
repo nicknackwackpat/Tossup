@@ -1,6 +1,6 @@
 import React from 'react';
 import TopMenu from "../components/Navbar/navbar.js";
-import Header from "../components/Header/header.js";
+import Header from "../components/Header/Header.js";
 
 function ProfilePage () {
     

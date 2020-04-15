@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TopMenu from "./components/Navbar/navbar.js";
-import Header from "./components/Header/header.js";
-import Map from "./components/Map/map.js";
+import Header from "./components/Header/Header.js";
+import Map from "./components/Map/Map.js";
 // import Signup from "./components/Login/Signup.js";
 import Login from "./Pages/LoginPage.js";
 
@@ -15,16 +15,16 @@ import Login from "./Pages/LoginPage.js";
 // //import Navbar from "./components/Navbar/Navbar.js";
 
 // // import { BrowserRouter, Route, Switch } from "react-router-dom";
-// function App() {
-//   return (
-//     // <BrowserRouter>
-//     <div>
-//     <TopMenu />
-//     <Header />
-//     <Map />
-//     {/* <Login /> */}
-//     </div>
-//   )}
+function App() {
+  return (
+    // <BrowserRouter>
+    <div>
+    <TopMenu />
+    <Header />
+    <Map />
+    {/* <Login /> */}
+    </div>
+  )}
 // // BrowserRouter instructions
 // // The app will not render correctly until you setup a Route component.
 // // Refer to the Basic Example documentation if you need to.
