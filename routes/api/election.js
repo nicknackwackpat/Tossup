@@ -5,3 +5,5 @@ const electionController = require("../../controllers/electionController");
 router.route("/")
   .get(electionController.findAll)
   .post(electionController.create);
+
+  module.exports = router;
