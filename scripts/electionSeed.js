@@ -12,31 +12,6 @@ mongoose.connect(
     }
 );
 
-const election = [
-    {
-        candidate = [
-            {
-                name: "bill",
-                color: "Green",
-                vote: 0
-            },
-            {
-                name: "Jon",
-                color: "Red",
-                votes: 0
-            },
-            results = [
-                {
-                    name: "NY",
-                    votes: 0
-                },
-                {
-                    name: "New Jersey",
-                    votes: 0
-                }
-            ]
-        ]
-
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
@@ -49,9 +24,10 @@ function shuffle(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
-function vote(candidateArr){
-const dummy=[]
-//console.log(data);
+
+const electionSeed=[]
+
+function vote(candidateArr) {
 
 for (state in data){
     let newState={}
@@ -59,69 +35,26 @@ for (state in data){
     newState.stateID=stateID
     let totalPopulation = data[state].population
     newState.totalPopulation=totalPopulation
+    newState.candidates = [];
     shuffle(candidateArr)
-    candidateArr.forEach(candidate=>{
-        newState[candidate]= Math.floor(Math.random() * totalPopulation)
-        totalPopulation-=newState[candidate]
+    candidateArr.forEach((candidate, i)=>{
+        newState.candidates.push(Math.floor(Math.random() * totalPopulation))
+        totalPopulation-=newState.candidates[i]
     })
-    dummy.push(newState)
+    electionSeed.push(newState)
 };
 
-console.log(dummy)
+console.log(electionSeed)
 }
 vote(candidateArray)
-
-// vote(["Predator", "Alien", "Trump"])
-// require("dotenv").config();
-// election={
-//     date: datetime,
-//     user: "",
-//     result= [dummy]
-// }
-
-// mongoose.connect(
-//     process.env.MONGODB_URI || 
-//     "mongodb://localhost/project3", {
-//         useNewUrlParser: true,
-//         useFindAndModify: false
-//     }
-// );
-
-// const election = [
-//     {
-//         candidate = [
-//             {
-//                 name: "bill",
-//                 color: "Green",
-//                 vote: 0
-//             },
-//             {
-//                 name: "Jon",
-//                 color: "Red",
-//                 votes: 0
-//             },
-//             results = [
-//                 {
-//                     name: NY,
-//                     votes: 0
-//                 },
-//                 {
-//                     name: Boston,
-//                     votes: 0
-//                 }
-//             ]
-//         ]
-//     }
-// ]
  
-
-//  db.Election.deleteMany({})
-//     .then(() => db.Election.collection.insertMany(electionSeed))
-//     .then(data => {
-//         console.log(data.result.n + " records inserted!");
-//         process.exit(0);
-//     })
-//     .catch(err => {
-//         console.error(err);
-//         process.exit(1);
-//     });
+ db.Election.deleteMany({})
+    .then(() => db.Election.collection.insertMany(electionSeed))
+    .then(data => {
+        console.log(data.result.n + " records inserted!");
+        process.exit(0);
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1);
+    });

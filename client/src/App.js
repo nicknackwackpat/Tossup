@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TopMenu from "./components/Navbar/navbar.js";
 import Header from "./components/Header/header.js";
 import Map from "./components/Map/map.js";
-// import Signup from "./components/Login/Signup.js";
+// import Signup from "./components/Login/signup.js";
 import Login from "./Pages/LoginPage.js";
 
  import CandidatePage from "./Pages/CandidatePage.js";
@@ -19,7 +19,7 @@ function App() {
   return (
     // <BrowserRouter>
     <div>
-    <CandidatePage />
+    <TopMenu />
     <Header />
     <Map />
     {/* <Login /> */}

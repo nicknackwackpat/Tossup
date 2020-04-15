@@ -4,34 +4,26 @@ import USAMap from "react-usa-map";
 // import Candidate from "candidate.js";
 // import d3 from 'd3';
 import data from "./data/us-states.js";
+import API from "../../utils/API";
 
 class Map extends Component {
-
   mapHandler = (event) => {
     console.log(data);
     alert(event.target.dataset.name);
   };
 
-  // getStateNames = (event) => {
-  //   const stateArray = [];
+  state = {
+    results: []
+  }
 
-  //   for (let i = 0; i < stateArray.length; i++) {
-  //     let stateName = event.target.dataset.name;
-
-  //     stateName.push(stateArray);
-  //   }
-  //   console.log(stateArray);
-  // };
-
-  // getStateVotes = () => {
-  //   this.getStateNames();
-
-  //   let voteTotal = 100;
-  //   let candidate1 = "Johnny Bravo";
-  //   let candidate2 = "Kim Possible";
-
-
-  // };
+  componentDidMount() {
+    API.getResults().then(res => {
+      console.log(res.data)
+      this.setState({ results: res.data })
+    }).catch(err => {
+      console.log(err);
+    });
+  }
 
   statesCustomConfig = () => {
     return {

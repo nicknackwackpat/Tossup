@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TopMenu from "../components/Navbar/navbar.js";
-import Candidate from "../components/CandidateSelect/candidate.js";
+import Footer from "../components/Footer/footer.js";
+import Candidate from "../components/candidateSelect/candidate.js";
 // import {Candidate} from "../components/CandidateSelect";
 
 
