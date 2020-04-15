@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Map.css";
+import "./map.css";
 import USAMap from "react-usa-map";
 // import Candidate from "candidate.js";
 // import d3 from 'd3';
