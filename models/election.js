@@ -15,7 +15,10 @@ const Schema = mongoose.Schema;
 const electionSchema = new Schema({
     stateID: String,
     totalPopulation: Number,
-        candidates: [],
+        candidates: [{
+            name: String,
+            voteTotal: Number
+        }],
     });
     
     const Election = mongoose.model("Election", electionSchema);
