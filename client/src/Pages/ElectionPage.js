@@ -1,7 +1,7 @@
 import React from 'react';
 import TopMenu from "../components/Navbar/navbar.js";
-import Header from "../components/Header/Header.js";
-import Map from "../components/Map/Map.js"
+import Header from "../components/Header/header.js";
+import Map from "../components/Map/map.js"
 
 function ElectionPage (){
 
