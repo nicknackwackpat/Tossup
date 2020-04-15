@@ -29,7 +29,7 @@ const onChangeHandler = (e)=>{
                         className="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
-                     />
+                        {...props} />
                 </div>
 
 
@@ -43,7 +43,7 @@ const onChangeHandler = (e)=>{
                         className="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
-                     />
+                        {...props} />
                 </div>
 
 
@@ -57,7 +57,7 @@ const onChangeHandler = (e)=>{
                         class="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
-                        />
+                        {...props} />
                 </div>
 
 
@@ -71,7 +71,7 @@ const onChangeHandler = (e)=>{
                         class="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
-                         />
+                        {...props} />
                 </div>
 
 
@@ -81,7 +81,7 @@ const onChangeHandler = (e)=>{
             <br />
 
             <div class="row3">
-                <button type="button" class="btn btn-danger btn-lg" id="startBtn">Let the vote begin</button>
+                <button {...props} type="button" class="btn btn-danger btn-lg" id="startBtn">Let the vote begin</button>
 
             </div>
         </div>
