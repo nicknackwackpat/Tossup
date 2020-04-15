@@ -10,7 +10,9 @@ import Candidate from "../components/candidateSelect/candidate.js";
 function CandidatePage (){
     return (
         <div>
+    <Candidate />
     <TopMenu />
+   
         </div>
     )}
 
