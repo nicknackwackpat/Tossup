@@ -17,7 +17,7 @@ const electionSchema = new Schema({
                 votes: 0
             }
         ],
-        results ={
+        results: {
             NY: [{
                 name: String,
                 votes: Number
