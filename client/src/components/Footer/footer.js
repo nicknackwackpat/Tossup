@@ -1,10 +1,13 @@
 import React from "react";
 import "./Footer.css";
 import { Nav, NavLink } from "reactstrap";
+import ReactDOM from 'react-dom';
+import Center from 'react';
 
 const Footer = () => {
   return (
     <div className="footer">
+      <Center>
       <Nav>
         <>
           <NavLink href="https://www.usa.gov/register-to-vote">
@@ -12,6 +15,7 @@ const Footer = () => {
           </NavLink>
         </>
       </Nav>
+      </Center>
     </div>
   );
 };
