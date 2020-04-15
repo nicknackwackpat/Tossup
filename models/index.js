@@ -2,5 +2,6 @@
 
 module.exports = {
     User: require("./user"),
+    Election: require("./election")
     // Map: require("./map")
 };

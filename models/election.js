@@ -1,36 +1,21 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// {
+//     stateID: 'WY',
+//     totalPopulation: 578759,
+//     Nick: 80259,
+//     Joe: 400745,
+//     Amy: 60181,
+//     Nelson: 15569
+//   }
+
 // const passportLocalMongoose = require('passport-local-mongoose');
 
 const electionSchema = new Schema({
-    election: [{
-        candidate: [
-            {
-                name: "bill",
-                color: "green",
-                votes: 0
-            },
-            {
-                name: "Jon",
-                color: "blue",
-                votes: 0
-            }
-        ],
-        results: {
-            NY: [{
-                name: String,
-                votes: Number
-            }],
-
-    candidatename: {
-      type: String, 
-      required: true
-
-    },
-      electionstate: Number,
-      color: String
-    
+    stateID: String,
+    totalPopulation: Number,
+        candidates: [],
     });
     
     const Election = mongoose.model("Election", electionSchema);
