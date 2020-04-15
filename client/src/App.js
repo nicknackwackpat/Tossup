@@ -15,16 +15,16 @@ import Login from "./Pages/LoginPage.js";
 // //import Navbar from "./components/Navbar/Navbar.js";
 
 // // import { BrowserRouter, Route, Switch } from "react-router-dom";
-function App() {
-  return (
-    // <BrowserRouter>
-    <div>
-    <TopMenu />
-    <Header />
-    <Map />
-    {/* <Login /> */}
-    </div>
-  )}
+// function App() {
+//   return (
+//     // <BrowserRouter>
+//     <div>
+//     <TopMenu />
+//     <Header />
+//     <Map />
+//     {/* <Login /> */}
+//     </div>
+//   )}
 // // BrowserRouter instructions
 // // The app will not render correctly until you setup a Route component.
 // // Refer to the Basic Example documentation if you need to.
