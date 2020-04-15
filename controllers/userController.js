@@ -5,18 +5,26 @@ module.exports = {
   getUser: (req, res, next) => {
     console.log('user')
   
-    if (req.user) {
-      return res.json({user: req.user});
-    } else {
-      return res.json({user: null});
-    }
+    // if (req.user) {
+    //   return res.json({user: req.user});
+    // } else {
+      db.User
+      .find(req.query)
+      .sort({ lastName: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+
+
+    //   return res.json({user: null});
+    // }
 },
 
 // Find All users?
   findAll: function(req, res) {
     db.User
       .find(req.query)
-      .sort({ date: -1 })
+      .populate("elections")
+      .sort({ lastName: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

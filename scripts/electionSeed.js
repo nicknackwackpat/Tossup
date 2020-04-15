@@ -26,11 +26,11 @@ const election = [
             },
             results = [
                 {
-                    name: NY,
+                    name: "NY",
                     votes: 0
                 },
                 {
-                    name: Boston,
+                    name: "New Jersey",
                     votes: 0
                 }
             ]
