@@ -1,15 +1,25 @@
-import axios from "axios";
+const axios = require ("axios");
+// const router = require("express").Router();
+// const userController = require("../../controllers/userController");
 
-export default {
 // USER ROUTES INCLUDING AUTHENTICATION
 
-// CREATE USER
-// router.post('/user');
-
+export default {
 // AUTHENTICATION ROUTE - RUNS PASSPORT
-login: function(email, password) {
-  return axios.post("/api/user/login");
+// Finds user info
+getUser: function() {
+  console.log("BUELLER");
+  return axios.get('api/user/')
 },
+
+
+// Logs user in
+login: function(email, password) {
+  return axios.post("/api/user/login/", { email, password }),
+  console.log("logged in");
+},
+
+
 // This syntax comes from Passport...not sure we need it.
 // req.login(user, function(err) {
 //   if (err) { return next(err); }

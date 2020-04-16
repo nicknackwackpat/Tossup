@@ -4,36 +4,41 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const passport = require("passport");
 // const morgan = require("./morgan")
-
+const bodyParser = require("body-parser")
+const session = require('express-session')
+const MongoStore = require('connect-mongo')(session)
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // requires the model with Passport-Local Mongoose plugged in
-const User = require('./models/user');
-const Map = require('./models/map');
-const Election = require('./models/election');
+// const User = require('./models/user');
+// const Map = require('./models/map');
+// const Election = require('./models/election');
 
-// use static authenticate method of model in LocalStrategy
-// passport.use(new LocalStrategy(User.authenticate()));
- 
-// // use static serialize and deserialize of model for passport session support
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
 
 // Define middleware here
 // app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.configure(function() {
-  app.use(express.static('public'));
-  app.use(express.cookieParser());
-  app.use(express.bodyParser());
-  app.use(express.session({ secret: 'keyboard cat' }));
-  app.use(passport.initialize());
-  app.use(passport.session());
-  app.use(app.router);
-});
+app.use(
+	bodyParser.urlencoded({
+		extended: false
+	})
+)
+app.use(bodyParser.json())
+// Sessions
+app.use(
+	session({
+		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
+		store: new MongoStore({ mongooseConnection: mongoose.connection }),
+		resave: false, //required
+		saveUninitialized: false //required
+	})
+)
+// Passport
+app.use(passport.initialize())
+app.use(passport.session()) // calls the deserializeUser
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {

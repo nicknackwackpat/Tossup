@@ -2,48 +2,49 @@ const db = require("../models");
 
 // Defining methods for the userController
 module.exports = {
-  getUser: (req, res, next) => {
-    console.log('user')
-  
-    // if (req.user) {
-    //   return res.json({user: req.user});
-    // } else {
-      db.User
-      .find(req.query)
-      .sort({ lastName: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
 
-
-    //   return res.json({user: null});
-    // }
+// Finds the user in the database
+getUser: (req, res, next) => {
+  console.log('user')
+  console.log(req.user);
+  if (req.user) {
+    return res.json({ user: req.user });
+  } else {
+  return res.json({ user: null })
+  }
 },
 
+      // db.User
+      // .find(req.query)
+      // .sort({ lastName: -1 })
+      // .then(dbModel => res.json(dbModel))
+      // .catch(err => res.status(422).json(err));
+
 // Find All users?
-  findAll: function(req, res) {
-    db.User
-      .find(req.query)
-      .populate("elections")
-      .sort({ lastName: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
+findAll: function(req, res) {
+  db.User
+    .find(req.query)
+    .populate("elections")
+    .sort({ lastName: -1 })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+},
 
   // Find a unique user
-  findById: function(req, res) {
-    db.User
-      .findById(req.params.id)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
+findById: function(req, res) {
+  db.User
+    .findById(req.params.id)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+},
 
 // Create an account
-  create: function(req, res) {
-    db.User
-      .create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
+create: function(req, res) {
+  db.User
+    .create(req.body)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+},
 
   // Update your account --not for MVP
   // update: function(req, res) {
