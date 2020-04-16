@@ -1,27 +1,13 @@
 import React from 'react';
-import TopMenu from "../components/Navbar/navbar.js";
+import Header from "../components/Navbar/navbar.js"
 
 
 
 function ResultsPage (){
-    return ("Hello World Results !!! ");
-}
+    return (
+        <div>
+            <Header />
+        </div>
+    )};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export default ResultsPage;
- 
+export default ResultsPage

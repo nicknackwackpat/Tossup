@@ -25,6 +25,16 @@ const Election = require('./models/election');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.configure(function() {
+  app.use(express.static('public'));
+  app.use(express.cookieParser());
+  app.use(express.bodyParser());
+  app.use(express.session({ secret: 'keyboard cat' }));
+  app.use(passport.initialize());
+  app.use(passport.session());
+  app.use(app.router);
+});
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/src"));

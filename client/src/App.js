@@ -1,34 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, } from "react-router-dom";
 import TopMenu from "./components/Navbar/navbar.js";
-import Header from "./components/Header/header.js";
-import Map from "./components/Map/map.js";
+import Footer from "./components/Footer/footer.js";
 // import Signup from "./components/Login/signup.js";
-import Login from "./Pages/LoginPage.js";
 
 import CandidatePage from "./Pages/CandidatePage.js";
- import ElectionPage from "./Pages/ElectionPage.js";
- import LoginPage from "./Pages/LoginPage.js";
- import ProfilePage from "./Pages/ProfilePage.js";
- import ResultsPage from "./Pages/ResultsPage.js";
-
-// // import { BrowserRouter, Route, Switch } from "react-router-dom";
-// function App() {
-//   return (
-//     // <BrowserRouter>
-//     <div>
-//     {/* <TopMenu /> */}
-//     {/* <Header /> */}
-//     {/* <Map /> */}
-//     <Login />
-//     </div>
-//   )}
-
-
-// // BrowserRouter instructions
-// // The app will not render correctly until you setup a Route component.
-// // Refer to the Basic Example documentation if you need to.
-// // (https://reacttraining.com/react-router/web/example/basic)
+import ElectionPage from "./Pages/ElectionPage.js";
+import LoginPage from "./Pages/LoginPage.js";
+import ResultsPage from "./Pages/ResultsPage.js";
 
 class App extends Component {
     constructor() {
@@ -69,7 +48,7 @@ class App extends Component {
       };
 
       login = (username, password) => {
-        AUTH.login(username, password).then(response => {
+        API.login(username, password).then(response => {
           console.log(response);
           if (response.status === 200) {
             // update the state
@@ -78,7 +57,7 @@ class App extends Component {
                 loggedIn: true,
                 user: response.data.user
               },
-              () => sessionStorage.setItem("token", response.data.token)
+              // () => sessionStorage.setItem("token", response.data.token)
             );
           }
         });
@@ -90,8 +69,8 @@ render() {
          {this.state.loggedIn && (
            <div>
              <TopMenu user={this.state.user} logout={this.logout} />
-      <Router>
-          <Switch>
+          <Router>
+
 {/* SETS THE HOME PAGE TO CANDIDATEPAGE WHEN USER IS LOGGED IN */}
           <Route exact path = "/" component={() => 
             <CandidatePage user={this.state.user} />}
@@ -102,19 +81,19 @@ render() {
           <Route exact path = "/results" component={() =>
             <ResultsPage user={this.state.user} />} 
               />
-            </Switch>
             </Router>
           </div>
           )}
-        </div>
-    )      
   {!this.state.loggedIn && (
-        <div>
-        <Route exact path="/" component={() => 
+        <Router>
+          <Route exact path="/" component={() => 
           <LoginPage login={this.login} />}
           />
-      </div>
-      )};
-    };
-        }
+        </Router>
+    )};
+    <Footer />
+    </div>
+    )};
+  };
+
 export default App;
