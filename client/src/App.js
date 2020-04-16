@@ -1,75 +1,121 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import TopMenu from "./components/Navbar/navbar.js";
-import Header from "./components/Header/header.js";
-import Map from "./components/Map/map.js";
+import Footer from "./components/Footer/footer.js";
 // import Signup from "./components/Login/signup.js";
-import Login from "./Pages/LoginPage.js";
+import API from "./utils/API";
 
+import CandidatePage from "./Pages/CandidatePage.js";
+import ElectionPage from "./Pages/ElectionPage.js";
+import LoginPage from "./Pages/LoginPage.js";
 import ResultsPage from "./Pages/ResultsPage.js";
- import CandidatePage from "./Pages/CandidatePage.js";
- import ElectionPage from "./Pages/ElectionPage.js";
- import LoginPage from "./Pages/LoginPage.js";
- import ProfilePage from "./Pages/ProfilePage.js";
-//  import ResultsPage from "./Pages/ResultsPage.js";
- import SignUpPage from "./Pages/SignUpPage.js";
-// //import Navbar from "./components/Navbar/Navbar.js";
+import Axios from "axios";
+import { render } from "react-dom";
 
-// // import { BrowserRouter, Route, Switch } from "react-router-dom";
-<<<<<<< HEAD
-function App() {
-  return (
-    // <BrowserRouter>
-    <div>
-    <ResultsPage />
-    {/* <Map /> */}
-    {/* <Login /> */}
-    </div>
-  )}
-=======
-// function App() {
-//   return (
-//     // <BrowserRouter>
-//     <div>
-//     <TopMenu />
-//     <Header />
-//     <Map />
-//     {/* <Login /> */}
-//     </div>
-//   )}
->>>>>>> bceba61073ebe1ada50297a0da99a7334c22ad05
-// // BrowserRouter instructions
-// // The app will not render correctly until you setup a Route component.
-// // Refer to the Basic Example documentation if you need to.
-// // (https://reacttraining.com/react-router/web/example/basic)
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      loggedIn: false,
+      user: null,
+      email: "",
+      password: "",
+    };
+  }
 
- function App() {
-     return (
-       <Router>
-        <div>
-          <Switch>
-              <Route exact path = "/CandidatePage"> 
-              </Route>
-              <Route exact path ="/ElectionPage">
-                 <ElectionPage/>
-              </Route>
-              <Route exact path ="/">
-                <LoginPage/>
-              </Route >
-              <Route exact path = "/ProfilePage">
-                <ProfilePage/>
-              </Route>
-              <Route exact path = "/ResultsPage">
-                <ResultsPage/>
-              </Route>
-              <Route exact path = "/SignUpPage">
-                <SignUpPage/> 
-             </Route> 
-            </Switch>
+  componentDidMount() {
+    API.getUser()
+      .then((response) => {
+      console.log(response.data);
+      if (!!response.data.user) {
+        this.setState({
+          loggedIn: true,
+          user: response.data.user,
+        });
+      } else {
+        this.setState({
+          loggedIn: false,
+          user: null,
+        });
+      }
+    }).catch(err => console.log(err));
+  }
+
+  logout = (event) => {
+    event.preventDefault();
+    this.setState(
+      {
+        loggedIn: false,
+        user: null,
+      },
+      () => sessionStorage.removeItem("token")
+    );
+  };
+
+  login = (event) => {
+    event.preventDefault();
+    console.log("login clicked");
+    API.login(this.state.email, this.state.password).then((response) => {
+      console.log(response);
+      if (response.status === 200) {
+        // update the state
+        this.setState(
+          {
+            loggedIn: true,
+            user: response.data.user,
+          }
+        );
+      }
+    });
+  };
+
+  handleInputChange = event => {
+    // Updating the input's state
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
+  render() {
+    return (
+      <div className="App">
+        {this.state.loggedIn && (
+          <div>
+            <TopMenu user={this.state.user} logout={this.logout} />
+            <Router>
+              {/* SETS THE HOME PAGE TO CANDIDATEPAGE WHEN USER IS LOGGED IN */}
+              <Route
+                exact
+                path="/"
+                component={() => <CandidatePage user={this.state.user} />}
+              />
+              <Route
+                exact
+                path="/election"
+                component={() => <ElectionPage user={this.state.user} />}
+              />
+              <Route
+                exact
+                path="/results"
+                component={() => <ResultsPage user={this.state.user} />}
+              />
+            </Router>
           </div>
-         </Router>
-   );
+        )}
+        {!this.state.loggedIn && (
+          <Router>
+            <Route
+              exact
+              path="/"
+              component={() => <LoginPage handleInputChange={this.handleInputChange} login={this.login} email={this.state.email} password={this.state.password} />}
+            />
+          </Router>
+        )}
+        ;
+        <Footer />
+      </div>
+    );
+  }
+}
 
-   }
- 
 export default App;
