@@ -14,3 +14,13 @@ module.exports = {
           .catch(err => res.status(422).json(err));
       },
 }
+
+// Find All candidates?
+  // findAll: function(req, res) {
+  //   db.Candidate
+  //     .find(req.query)
+  //     .populate("elections")
+  //     .sort({ lastName: -1 })
+  //     .then(dbModel => res.json(dbModel))
+  //     .catch(err => res.status(422).json(err));
+  // },

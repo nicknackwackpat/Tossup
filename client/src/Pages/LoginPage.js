@@ -1,18 +1,14 @@
 import React from "react";
-import TopMenu from "../components/Navbar/navbar.js";
 import Carousel from "../components/Carousel/carousel.js"
 import LoginForm from "../components/Login/login.js"
 import SignupExpander from "../components/Login/expander.js"
-import Footer from "../components/Footer/footer.js"
 
-function LoginPage() {
+function LoginPage(props) {
   return (
     <div>
-    <TopMenu />
     <Carousel />
     <br />
-    <LoginForm />  <SignupExpander />
-    <Footer/>
+    <LoginForm handleInputChange={props.handleInputChange} login={props.login} email={props.email} password={props.password} />  <SignupExpander />
     </div>
   );
 }
