@@ -9,11 +9,12 @@ import API from "../../utils/API";
 class Map extends Component {
   mapHandler = (event) => {
     console.log(data);
-    alert(event.target.dataset.name);
+    alert(event);
   };
 
   state = {
-    results: []
+    results: [],
+    fillColor: ""
   }
 
   componentDidMount() {
@@ -23,22 +24,35 @@ class Map extends Component {
       const electionResultsWithWinner = electionResults.map((stateResults)=> {
         let winner = {
           name: "",
-          voteTotal: 0
+          color: "",
+          voteTotal: 0,
         }
 
         stateResults.candidates.forEach(candidate => {
+          stateResults.candidate[0].color = "#983158";
+          stateResults.candidate[1].color = "#E02459";
+          stateResults.candidate[2].color = "#08E14F";
+          stateResults.candidate[3].color = "#388FCE";
+
           if (winner.voteTotal < candidate.voteTotal) {
             winner = candidate;
+            winner.color = candidate.color
           }
         })
-        stateResults.winner = winner
+        stateResults.winner = winner;
+        this.setState({fillColor: winner.color});
         return stateResults
       })
+
       console.log(electionResultsWithWinner);
-      this.setState({ results: electionResultsWithWinner })
+      this.setState({ results: electionResultsWithWinner });
+
     }).catch(err => {
       console.log(err);
     });
+  }
+
+  changeStateColor = () => {
   }
 
 
@@ -63,7 +77,7 @@ class Map extends Component {
       <div className="map">
         <USAMap
           title={"TossUp"}
-          customize={this.statesCustomConfig()}
+          customize={this.componentDidMount()}
           onClick={this.mapHandler}
         />
       </div>
