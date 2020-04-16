@@ -12,7 +12,7 @@ function CandidatePage (){
     return (
         <div>
     <Candidate />
-    <TopMenu />
+    {/* <TopMenu /> */}
    
         </div>
     )}
