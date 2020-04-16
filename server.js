@@ -52,7 +52,13 @@ app.use(routes);
 // });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/project3");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/project3", {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('MongoDB Connected!'))
+.catch(err => console.log(err))
 
 // Start the API server
 app.listen(PORT, function() {

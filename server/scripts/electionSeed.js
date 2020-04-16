@@ -51,13 +51,16 @@ console.log(electionSeed[10].candidates)
 }
 vote(candidateArray)
  
- db.Election.deleteMany({})
-    .then(() => db.Election.collection.insertMany(electionSeed))
+  db.Election.deleteMany({})
+     .then(() => db.Election.collection.insertMany(electionSeed))
     .then(data => {
-        console.log(data.result.n + " records inserted!");
+         console.log(data.result.n + " records inserted!");
+//         for  (const doc of db.Election.collection.find({})) {  console.log(doc); // Prints documents one at a time
+        
         process.exit(0);
     })
+}
     .catch(err => {
         console.error(err);
-        process.exit(1);
+          process.exit(1);
     });

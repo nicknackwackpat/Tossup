@@ -10,7 +10,7 @@ function CandidatePage (){
         <div>
     <Header />
     <Candidate />
-
+    {/* <TopMenu /> */}
    
         </div>
     )}
