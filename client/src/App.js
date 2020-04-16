@@ -30,33 +30,33 @@ function App() {
 // // Refer to the Basic Example documentation if you need to.
 // // (https://reacttraining.com/react-router/web/example/basic)
 
-//  function App() {
-//      return (
-//        <Router>
-//         <div>
-//           <Switch>
-//               <Route exact path = "/CandidatePage"> 
-//               </Route>
-//               <Route exact path ="/ElectionPage">
-//                  <ElectionPage/>
-//               </Route>
-//               <Route exact path ="/">
-//                 <LoginPage/>
-//               </Route >
-//               <Route exact path = "/ProfilePage">
-//                 <ProfilePage/>
-//               </Route>
-//               <Route exact path = "/ResultsPage">
-//                 <ResultsPage/>
-//               </Route>
-//               <Route exact path = "/SignUpPage">
-//                 <SignUpPage/> 
-//              </Route> 
-//             </Switch>
-//           </div>
-//          </Router>
-//    );
+ function App() {
+     return (
+       <Router>
+        <div>
+          <Switch>
+              <Route exact path = "/CandidatePage"> 
+              </Route>
+              <Route exact path ="/ElectionPage">
+                 <ElectionPage/>
+              </Route>
+              <Route exact path ="/">
+                <LoginPage/>
+              </Route >
+              <Route exact path = "/ProfilePage">
+                <ProfilePage/>
+              </Route>
+              <Route exact path = "/ResultsPage">
+                <ResultsPage/>
+              </Route>
+              <Route exact path = "/SignUpPage">
+                <SignUpPage/> 
+             </Route> 
+            </Switch>
+          </div>
+         </Router>
+   );
 
-//    }
+   }
  
 export default App;
