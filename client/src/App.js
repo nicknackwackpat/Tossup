@@ -6,25 +6,25 @@ import Map from "./components/Map/map.js";
 // import Signup from "./components/Login/signup.js";
 import Login from "./Pages/LoginPage.js";
 
+import ResultsPage from "./Pages/ResultsPage.js";
  import CandidatePage from "./Pages/CandidatePage.js";
  import ElectionPage from "./Pages/ElectionPage.js";
  import LoginPage from "./Pages/LoginPage.js";
  import ProfilePage from "./Pages/ProfilePage.js";
- import ResultsPage from "./Pages/ResultsPage.js";
+//  import ResultsPage from "./Pages/ResultsPage.js";
  import SignUpPage from "./Pages/SignUpPage.js";
 // //import Navbar from "./components/Navbar/Navbar.js";
 
 // // import { BrowserRouter, Route, Switch } from "react-router-dom";
-// function App() {
-//   return (
-//     // <BrowserRouter>
-//     <div>
-//     <TopMenu />
-//     <Header />
-//     <Map />
-//     {/* <Login /> */}
-//     </div>
-//   )}
+function App() {
+  return (
+    // <BrowserRouter>
+    <div>
+    <ResultsPage />
+    {/* <Map /> */}
+    {/* <Login /> */}
+    </div>
+  )}
 // // BrowserRouter instructions
 // // The app will not render correctly until you setup a Route component.
 // // Refer to the Basic Example documentation if you need to.
