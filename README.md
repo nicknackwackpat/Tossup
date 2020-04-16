@@ -28,4 +28,6 @@ We would like to color code each of the candidates and as they win a state chang
 
 ## GitHub Repository
 
+https://github.com/nicknackwackpat/Tossup/
+
 ---
