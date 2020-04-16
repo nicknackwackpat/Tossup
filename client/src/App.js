@@ -16,6 +16,7 @@ import ResultsPage from "./Pages/ResultsPage.js";
 // //import Navbar from "./components/Navbar/Navbar.js";
 
 // // import { BrowserRouter, Route, Switch } from "react-router-dom";
+<<<<<<< HEAD
 function App() {
   return (
     // <BrowserRouter>
@@ -25,38 +26,50 @@ function App() {
     {/* <Login /> */}
     </div>
   )}
+=======
+// function App() {
+//   return (
+//     // <BrowserRouter>
+//     <div>
+//     <TopMenu />
+//     <Header />
+//     <Map />
+//     {/* <Login /> */}
+//     </div>
+//   )}
+>>>>>>> bceba61073ebe1ada50297a0da99a7334c22ad05
 // // BrowserRouter instructions
 // // The app will not render correctly until you setup a Route component.
 // // Refer to the Basic Example documentation if you need to.
 // // (https://reacttraining.com/react-router/web/example/basic)
 
-//  function App() {
-//      return (
-//        <Router>
-//         <div>
-//           <Switch>
-//               <Route exact path = "/CandidatePage"> 
-//               </Route>
-//               <Route exact path ="/ElectionPage">
-//                  <ElectionPage/>
-//               </Route>
-//               <Route exact path ="/">
-//                 <LoginPage/>
-//               </Route >
-//               <Route exact path = "/ProfilePage">
-//                 <ProfilePage/>
-//               </Route>
-//               <Route exact path = "/ResultsPage">
-//                 <ResultsPage/>
-//               </Route>
-//               <Route exact path = "/SignUpPage">
-//                 <SignUpPage/> 
-//              </Route> 
-//             </Switch>
-//           </div>
-//          </Router>
-//    );
+ function App() {
+     return (
+       <Router>
+        <div>
+          <Switch>
+              <Route exact path = "/CandidatePage"> 
+              </Route>
+              <Route exact path ="/ElectionPage">
+                 <ElectionPage/>
+              </Route>
+              <Route exact path ="/">
+                <LoginPage/>
+              </Route >
+              <Route exact path = "/ProfilePage">
+                <ProfilePage/>
+              </Route>
+              <Route exact path = "/ResultsPage">
+                <ResultsPage/>
+              </Route>
+              <Route exact path = "/SignUpPage">
+                <SignUpPage/> 
+             </Route> 
+            </Switch>
+          </div>
+         </Router>
+   );
 
-//    }
+   }
  
 export default App;
