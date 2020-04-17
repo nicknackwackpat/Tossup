@@ -57,9 +57,7 @@ vote(candidateArray)
   db.Election.deleteMany({})
      .then(() => db.Election.collection.insertMany(electionSeed))
     .then(data => {
-         console.log(data.result.n + " records inserted!");
-//         for  (const doc of db.Election.collection.find({})) {  console.log(doc); // Prints documents one at a time
-        
+         console.log(data.result.n + " records inserted!");    
         process.exit(0);
     })
     .catch(err => {
