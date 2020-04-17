@@ -2,8 +2,11 @@
     font-family: 'Barlow', sans-serif;
 }
 
+.resize{
+}
+
 .primary{
-    color: #341C54!important;
+    color: #341C54;
 }
 
 .secondary{
@@ -17,3 +20,12 @@
 .accent {
     color: #386a73
 }
+
+#mainBtn {
+    background-color: #341C54;
+    color: white;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
