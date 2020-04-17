@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "../components/Carousel/carousel.js"
-import LoginForm from "../components/Login/login.js"
+import LoginForm from "./../components/Login/login.js"
 import SignupExpander from "../components/Login/expander.js"
 
 function LoginPage(props) {

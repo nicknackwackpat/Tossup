@@ -83,7 +83,7 @@ const onChangeHandler = (e)=>{
 
             <div className="row3">
                 <button {...props} type="button" className="btn btn-danger btn-lg" id="startBtn">Let the vote begin</button>
-                type="submit" onClick={() => ('/election'))}
+                type="submit" onClick={() => ('/election')}
             </div>
         </div>
     
