@@ -15,7 +15,8 @@ getUser: function() {
 
 // Logs user in
 login: function(email, password) {
-  return axios.post("/api/user/login/", { email, password });
+  return axios.post("/api/user/login", { email, password })
+  // console.log("logged in");
 },
 
 
