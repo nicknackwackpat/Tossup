@@ -6,12 +6,6 @@ import { Nav, NavLink } from "reactstrap";
 const Footer = () => {
   return (
     <div className="footer">
-
-
-  
-    
-  
-      
       <Nav>
         <>
           <NavLink href="https://www.usa.gov/register-to-vote">
@@ -19,8 +13,6 @@ const Footer = () => {
           </NavLink>
         </>
       </Nav>
-      
-    
     </div>
   );
 
