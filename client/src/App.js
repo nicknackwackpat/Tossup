@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import TopMenu from "./components/Navbar/navbar.js";
+// import TopMenu from "./components/Navbar/navbar.js";
 import Footer from "./components/Footer/footer.js";
 // import Signup from "./components/Login/signup.js";
 import API from "./utils/API";
@@ -84,7 +84,7 @@ class App extends Component {
       <div className="App">
         {this.state.loggedIn && (
           <div>
-            <TopMenu user={this.state.user} logout={this.logout} />
+            {/* <TopMenu user={this.state.user} logout={this.logout} /> */}
             <Router>
               {/* SETS THE HOME PAGE TO CANDIDATEPAGE WHEN USER IS LOGGED IN */}
               <Route

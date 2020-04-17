@@ -11,7 +11,6 @@ function CandidatePage (){
     <TopMenu />
     <Header />
     <Candidate />
-   
         </div>
     )}
 
