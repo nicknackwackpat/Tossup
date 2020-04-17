@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const db = require("../models");
-const data = require("../client/src/components/Map/data/us-states.json")
+const data = require("../../client/src/components/Map/data/us-states.json")
 
 const candidateArray = ["Amy", "Joe", "Nelson", "Nick"];
 
