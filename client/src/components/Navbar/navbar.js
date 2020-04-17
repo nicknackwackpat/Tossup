@@ -24,12 +24,6 @@ const TopMenu= (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            {/* <NavItem>
-              <NavLink href="/components/">View Profile</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="">Run Election</NavLink>
-            </NavItem> */}
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
@@ -41,10 +35,6 @@ const TopMenu= (props) => {
                 <DropdownItem>
                   Run an Election!
                 </DropdownItem>
-                {/* <DropdownItem divider /> */}
-                {/* <DropdownItem>
-                  Reset
-                </DropdownItem> */}
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>

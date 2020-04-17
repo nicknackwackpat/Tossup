@@ -8,11 +8,6 @@ import ReactDOM from 'react-dom';
 const Footer = () => {
   return (
     <div className="footer">
-
-
-  
-    
-  
       
       <Nav>
         <>
