@@ -3,7 +3,7 @@ import API from "../../utils/API";
 import "./results.css";
 
 
-class ResultsPage extends React.Component {
+class Results extends React.Component {
     state = {
         usStates: [],
         sortOrder: ""
@@ -107,4 +107,4 @@ class ResultsPage extends React.Component {
     }
 }
 
-export default ResultsPage;
+export default Results;

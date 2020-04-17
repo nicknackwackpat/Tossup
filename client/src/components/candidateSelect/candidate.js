@@ -1,96 +1,120 @@
 import React from "react";
 import "./style.css";
+import { Table } from "reactstrap";
 
 const Candidate = (props) => {
-const onChangeHandler = (e)=>{
+  const onChangeHandler = (e) => {
+    e.preventDefault();
     console.log(e.target.value);
-    console.log("change happened");
-}
+    console.log("clicked to go to elections");
+  };
 
-    return (
-        <div className="row2">
+  return (
+    <div>
+      <div className="row2">
+        {/* <div className="col-4"></div> */}
+        <Table responsive>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Candidate Name</th>
+              <th>Color </th>
+              {/* <th>Img</th> */}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>
+                  <input
+                    type="text"
+                    className="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    {...props}
+                  />
+              </td>
 
-            <select id="colorselector" onChange={onChangeHandler} {...props}>
-                <option value="106" data-color="#A0522D">sienna</option>
-                <option value="47" data-color="#CD5C5C">indianred</option>
-                <option value="87" data-color="#FF4500">orangered</option>
-                <option value="15" data-color="#DC143C">crimson</option>
-                <option value="24" data-color="#FF8C00">darkorange</option>
-                <option value="78" data-color="#C71585">mediumvioletred</option>
-            </select>
+              <td></td>
+              {/* <td>Table cell</td> */}
+            </tr>
 
-            <div className="col-4">
-
-
+            <tr>
+              <th scope="row">2</th>
+              <td>
                 <div className="input-group">
-                    <div className="input-group-prepend"></div>
-                    <input
-                        type="text"
-                        className="form-control"
-                        aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default"
-                        {...props} />
+                  <input
+                    type="text"
+                    className="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    {...props}
+                  />
                 </div>
+              </td>
+              <td>Table cell</td>
+              {/* <td>Table cell</td> */}
+            </tr>
 
+            <tr>
+              <th scope="row">3</th>
+              <td>
+                  <input
+                    type="text"
+                    className="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    {...props}
+                  />
+              </td>
+              <td>Table cell</td>
+              {/* <td>Table cell</td> */}
+            </tr>
 
-                <br />
-
-
-                <div className="input-group">
-                    <div className="input-group-prepend"></div>
-                    <input
-                        type="text"
-                        className="form-control"
-                        aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default"
-                        {...props} />
+            <tr>
+              <th scope="row">4</th>
+              <td>
+                <div className="input-group-prepend">
+                  <input
+                    type="text"
+                    className="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    {...props}
+                  />
                 </div>
+              </td>
+              <td>Table cell</td>
+              {/* <td>Table cell</td> */}
+            </tr>
+          </tbody>
+        </Table>
+      </div>
+      <br />
 
+      <br />
+      <div>
+        <button
+          {...props}
+          type="button"
+          className="btn primary btn-lg"
+          id="startBtn"
+          onChangeHandler={"/election"}
+        >
+          Let the vote begin
+        </button>
 
-                <br />
-
-
-                <div className="input-group">
-                    <div className="input-group-prepend"></div>
-                    <input
-                        type="text"
-                        className="form-control"
-                        aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default"
-                        {...props} />
-                </div>
-
-
-                <br />
-
-
-                <div className="input-group">
-                    <div className="input-group-prepend"></div>
-                    <input
-                        type="text"
-                        className="form-control"
-                        aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default"
-                        {...props} />
-                </div>
-
-
-
-            </div>
-
-            <br />
-
-
-            <div className="row3">
-                <button {...props} type="button" className="btn btn-danger btn-lg" id="startBtn">Let the vote begin</button>
-                type="submit" onClick={() => ('/election'))}
-            </div>
-        </div>
-    
-
-    );
-
+        {/* type="submit" onClick={} */}
+      </div>
+    </div>
+  );
 };
-
-
 export default Candidate;
+
+// Color selector: eventually add this in to each Table, removing each one that is selected.Can also offer more options?
+// <select id="colorselector" onChange={onChangeHandler} {...props}>
+//                 <option data-color="#983158">mauve</option>
+//                 <option data-color="#FFCCFF"></option>
+//                 <option data-color="#00B050"></option>
+//                 <option data-color="#388FCE"></option>
+//             </select>
