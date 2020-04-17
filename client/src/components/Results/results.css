@@ -1,7 +1,24 @@
 table {
     width: 100%;
+    text-align: center;
 }
 
-th, td {
+th {
     text-align: center;
+    padding-bottom: 18px;
+    text-transform: uppercase;
+}
+
+/* tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF} */
+
+
+tr, td {
+    justify-content: center;
+    padding: 10px 40px;;
+}
+
+td {
+    border-top: 3px solid black;
+    border-bottom: inherit;
 }
