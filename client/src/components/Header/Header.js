@@ -9,9 +9,9 @@ const Header = (props) => {
       <Jumbotron fluid>
         <Container fluid className="mainbkg">
           <h1 className="display-3" color="white">Welcome to TossUp!</h1>
-          <p className="lead">This is a p tag</p>
+          <p className="lead"></p>
         </Container>
-      </Jumbotron> */}
+      </Jumbotron> 
       </div>
     )};
 
