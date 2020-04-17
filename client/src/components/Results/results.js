@@ -1,6 +1,7 @@
 import React from "react";
 import API from "../../utils/API";
 import "./results.css";
+import { Link } from "react-router-dom";
 
 
 class Results extends React.Component {
@@ -60,7 +61,7 @@ class Results extends React.Component {
     render() {
         console.log(this.state.usStates)
         return (
-            <div>
+            <div class="container">
                 <table>
                     <thead>
                      <tr>
@@ -100,8 +101,9 @@ class Results extends React.Component {
                             ))}
                     </tbody> }
                 </table>
-                <button id="SaveNtn" type="button" class="btn btn-success">Save Results</button>
-                <button id="reset" type="button" class="btn btn-danger">New Sim</button>
+                <button id="secondaryBtn" type="button" class="btn btn-success">Save Results</button>
+                <Link to="/">
+                <button id="secondaryBtn" type="button" class="btn btn-danger">New Election</button></Link>
             </div>
         );
     }
