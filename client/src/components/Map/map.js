@@ -12,25 +12,30 @@ class Map extends Component {
   };
 
   state = {
-    results: [],
-    fillColor: ""
+    results: {},
+    fillColor: "",
+    message: ""
   }
 
   componentDidMount() {
     ////loadingStuff();
 }
 
-  loadingStuff() {
+  loadingStuff=()=> {
   API.getResults().then(res => {
     const electionResults = res.data;
     let mapColors={}//props like TX: {fill: "BLUE"},
     // console.log(res.data)
+    let overallVotes = {
+
+    }
     const electionResultsWithWinner = electionResults.map((stateResults)=> {
       let winner = {
         name: "",
         color: "",
         voteTotal: 0,
       }
+
       let colorMap = {
       "Joe": "#983158",
       "Amy": "#FFCCFF",
@@ -39,7 +44,12 @@ class Map extends Component {
       }
 
       stateResults.candidates.forEach((candidate,index) => {
-        console.log(index,candidate)
+        //console.log(index,candidate)
+        if(overallVotes[candidate.name]){
+          overallVotes[candidate.name]+=candidate.voteTotal
+        }else{
+          overallVotes[candidate.name]=candidate.voteTotal
+        }
         candidate.color=colorMap[candidate.name]
         if (winner.voteTotal < candidate.voteTotal) {
           winner = candidate;
@@ -50,9 +60,22 @@ class Map extends Component {
       // this.setState({fillColor: winner.color});
       return stateResults
     })
-
+    console.log("OA",overallVotes)
+    let max=0
+    let bigWinner="nobody"
+    Object.keys(overallVotes).forEach(joker=>{
+      //his.setState({message: "the joker is "+joker})
+      if (overallVotes[joker]>max){
+        bigWinner=joker
+        max=overallVotes[joker]
+      }
+    })
+    this.setState({message:`The big winner was ${bigWinner} with ${max} votes`})
     console.log(electionResultsWithWinner);
-    //this.setState({ results: electionResultsWithWinner });
+    electionResultsWithWinner.forEach(x=>{
+      mapColors[x.stateID]={fill: x.winner.color}
+    })
+    this.setState({ results: mapColors, winner:bigWinner,  }, ()=>console.log("set results",this.state));
 
   }).catch(err => {
     console.log(err);
@@ -82,12 +105,13 @@ class Map extends Component {
   render() {
     return (
       <div className="map">
-        <h1 onClick={this.loadingStuff}>CLICK ME!c</h1>
+        <h1 onClick={this.loadingStuff}>Simulate Election-click me!</h1>
         <USAMap
           title={"TossUp"}
-          customize={this.statesCustomConfig()}
+          customize={this.state.results || this.statesCustomConfig()}
           onClick={this.mapHandler}
         />
+        <h1>{this.state.message}</h1>
       </div>
     );
 }
