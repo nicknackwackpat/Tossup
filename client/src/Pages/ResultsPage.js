@@ -7,7 +7,7 @@ function ResultsPage (){
     return (
     <div>
     <TopMenu />
-    {/* <Header />  */}
+    <Header /> 
     <Results />
     </div>
     );

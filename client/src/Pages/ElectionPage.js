@@ -7,7 +7,7 @@ function ElectionPage (){
     return(
         <main>
         <TopMenu />
-        {/* <Header /> */}
+        <Header />
         <Map />
         </main>
     );
