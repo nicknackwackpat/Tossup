@@ -41,16 +41,12 @@
     padding-bottom: 10px;
     font-family: 'Barlow', sans-serif;
     font-weight: 500;
-  }
+}
 
-#seconaryBtn {
+#secondaryBtn {
     background-color: #E86A73;
     margin: auto;
     display: grid;
     justify-content: center;
     padding-bottom: 10px;
-  }
-
-Form {
-    float: center;
 }

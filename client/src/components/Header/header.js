@@ -11,8 +11,8 @@ const Header = (props) => {
       <Jumbotron fluid className="mainbkg">
         <Container>
         <Row>
-          <Col xs="6" className="">
-          <img className="header-img header-right" src="https://i.imgur.com/EQBHicX.png " alt="podium-guy" />
+          <Col xs="6" className="header-right">
+          <img className="header-img " src="https://i.imgur.com/EQBHicX.png " alt="podium-guy" />
           </Col>
           <Col xs="6">
           <h1 className="header-style">TossUp!</h1>

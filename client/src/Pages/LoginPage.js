@@ -5,12 +5,12 @@ import SignupExpander from "../components/Login/expander.js"
 
 function LoginPage(props) {
   return (
-    <div>
+    <div className="container">
     <Carousel />
     <br />
-    <LoginForm handleInputChange={props.handleInputChange} login={props.login} email={props.email} password={props.password} />
-    <br />
-    <SignupExpander />
+    <div className="container login-form">
+    <LoginForm className="login-form" handleInputChange={props.handleInputChange} login={props.login} email={props.email} password={props.password} />  <SignupExpander />
+    </div>
     </div>
   );
 }
