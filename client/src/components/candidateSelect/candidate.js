@@ -17,9 +17,9 @@ const Candidate = (props) => {
         <Table responsive>
           <thead>
             <tr>
-              <th>#</th>
-              <th>Candidate Name</th>
-              <th>Color</th>
+              <th></th>
+              <th><h1>Name Your Candidates!</h1></th>
+              <th></th>
               {/* <th>Img</th> */}
             </tr>
           </thead>
