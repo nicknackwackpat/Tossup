@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./candidate.css";
 import { Table } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -17,9 +17,9 @@ const Candidate = (props) => {
         <Table responsive>
           <thead>
             <tr>
-              <th>#</th>
-              <th>Candidate Name</th>
-              <th>Color </th>
+              <th></th>
+              <th><h1>Name Your Candidates!</h1></th>
+              <th></th>
               {/* <th>Img</th> */}
             </tr>
           </thead>
@@ -36,7 +36,7 @@ const Candidate = (props) => {
                   />
               </td>
 
-              <td></td>
+              <td><img className="resize" src="https://i.imgur.com/s4TxpmS.png" alt="mauve#983158" /></td>
               {/* <td>Table cell</td> */}
             </tr>
 
@@ -53,7 +53,7 @@ const Candidate = (props) => {
                   />
                 </div>
               </td>
-              <td>Table cell</td>
+              <td><img className="resize" src="https://i.imgur.com/LqxyKK5.png" alt="pink#ffccff" /></td>
               {/* <td>Table cell</td> */}
             </tr>
 
@@ -68,7 +68,7 @@ const Candidate = (props) => {
                     {...props}
                   />
               </td>
-              <td>Table cell</td>
+              <td><img className="resize" src="https://i.imgur.com/mGkwTDl.png" alt="green#00b050" /></td>
               {/* <td>Table cell</td> */}
             </tr>
 
@@ -85,7 +85,7 @@ const Candidate = (props) => {
                   />
                 </div>
               </td>
-              <td>Table cell</td>
+              <td><img className="resize" src="https://i.imgur.com/OuVDomE.png" alt="blue##388fce" /></td>
               {/* <td>Table cell</td> */}
             </tr>
           </tbody>
@@ -105,8 +105,6 @@ const Candidate = (props) => {
           
         </button>
         </Link>
-
-        {/* type="submit" onClick={} */}
       </div>
     </div>
   );
