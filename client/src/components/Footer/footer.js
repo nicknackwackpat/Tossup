@@ -11,6 +11,7 @@ const Footer = () => {
           <NavLink href="https://www.usa.gov/register-to-vote">
             <h4>Register To Vote</h4>
           </NavLink>
+          
         </>
       </Nav>
     </div>
