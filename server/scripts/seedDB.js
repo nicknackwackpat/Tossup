@@ -5,7 +5,7 @@ require("dotenv").config();
 
 mongoose.connect(
     process.env.MONGODB_URI || 
-    "mongodb://localhost/project3", {
+    "mongodb://nicknackwackpat:Tossup123@ds161194.mlab.com:61194/heroku_kbcj2fj2", {
         useNewUrlParser: true,
         useFindAndModify: false
     }
