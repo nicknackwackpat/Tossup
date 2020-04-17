@@ -65,10 +65,10 @@ class Results extends React.Component {
                     <thead>
                      <tr>
                          <th>State</th>
-                         <th>Nick</th>
-                         <th>Joe</th>
-                         <th>Amy</th>
-                         <th>Nelson</th>
+                         <th></th>
+                         <th></th>
+                         <th></th>
+                         <th></th>
                      </tr>
                     </thead>
                     { <tbody>
@@ -77,24 +77,24 @@ class Results extends React.Component {
                                 <tr id="subHead" key={i}>
                                     <td>{stateResult.stateID}  </td>
                                     <td>{stateResult.winner === 0 ? 
-                                        <strong>{stateResult.candidates[0].voteTotal}</strong>
+                                        <strong>{stateResult.candidates[0].name} <br />{stateResult.candidates[0].voteTotal}</strong>
                                         :
-                                        <>{stateResult.candidates[0].voteTotal}</>
+                                        <>{stateResult.candidates[0].name} <br />{stateResult.candidates[0].voteTotal}</>
                                     }</td>
                                    <td>{stateResult.winner === 1 ? 
-                                        <strong>{stateResult.candidates[1].voteTotal}</strong>
+                                        <strong>{stateResult.candidates[1].name} <br />{stateResult.candidates[1].voteTotal}</strong>
                                         :
-                                        <>{stateResult.candidates[1].voteTotal}</>
+                                        <>{stateResult.candidates[1].name} <br />{stateResult.candidates[1].voteTotal}</>
                                     }</td>
                                     <td>{stateResult.winner === 2 ? 
-                                        <strong>{stateResult.candidates[2].voteTotal}</strong>
+                                        <strong>{stateResult.candidates[2].name} <br />{stateResult.candidates[2].voteTotal}</strong>
                                         :
-                                        <>{stateResult.candidates[2].voteTotal}</>
+                                        <>{stateResult.candidates[2].name} <br />{stateResult.candidates[2].voteTotal}</>
                                     }</td>
                                     <td>{stateResult.winner === 3 ? 
-                                        <strong>{stateResult.candidates[3].voteTotal}</strong>
+                                        <strong>{stateResult.candidates[3].name} <br />{stateResult.candidates[3].voteTotal}</strong>
                                         :
-                                        <>{stateResult.candidates[3].voteTotal}</>
+                                        <>{stateResult.candidates[3].name} <br />{stateResult.candidates[3].voteTotal}</>
                                     }</td>
                                 </tr>
                             ))}
