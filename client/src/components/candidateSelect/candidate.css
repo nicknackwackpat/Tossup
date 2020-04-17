@@ -2,3 +2,8 @@
   max-height: 40px;
   max-width: 40px
 }
+
+.header1 {
+  font-family: 'Barlow', sans-serif;
+  font-weight:800;
+}
