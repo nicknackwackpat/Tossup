@@ -34,7 +34,8 @@ const Candidate = (props) => {
                     {...props}
                   />
               </td>
-              <td>Table cell</td>
+
+              <td></td>
               {/* <td>Table cell</td> */}
             </tr>
 
@@ -98,7 +99,7 @@ const Candidate = (props) => {
           type="button"
           className="btn primary btn-lg"
           id="startBtn"
-          onClick={"/election"}
+          onChangeHandler={"/election"}
         >
           Let the vote begin
         </button>
@@ -109,3 +110,11 @@ const Candidate = (props) => {
   );
 };
 export default Candidate;
+
+// Color selector: eventually add this in to each Table, removing each one that is selected.Can also offer more options?
+// <select id="colorselector" onChange={onChangeHandler} {...props}>
+//                 <option data-color="#983158">mauve</option>
+//                 <option data-color="#FFCCFF"></option>
+//                 <option data-color="#00B050"></option>
+//                 <option data-color="#388FCE"></option>
+//             </select>
