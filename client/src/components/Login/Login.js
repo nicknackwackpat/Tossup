@@ -26,7 +26,8 @@ class LoginForm extends React.Component {
         <Label for="examplePassword" className="mr-sm-2">Password</Label>
         <Input onChange={this.handleInputChange} value={this.state.password} name="password" id="examplePassword" placeholder="don't tell!" />
       </FormGroup>
-        <Button id="mainBtn" type="submit" onClick={(e) => this.props.login(e, this.state.email, this.state.password)}>Submit</Button>
+      <br />
+        <Button id="mainBtn" type="submit" onClick={(e) => this.props.login(e, this.state.email, this.state.password)}>Log In</Button>
     </Form>
       );  
     }

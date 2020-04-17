@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from "../components/Header/header.js";
 import Map from "../components/Map/map.js";
-import TopMenu from "../components/Navbar/navbar.js"
+import TopMenu from "../components/TopMenu/topMenu.js";
 function ElectionPage (){
 
     return(
         <main>
         <TopMenu />
-        <Header />
+        {/* <Header /> */}
         <Map />
         </main>
     );

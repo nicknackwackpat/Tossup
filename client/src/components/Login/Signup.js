@@ -28,7 +28,7 @@ const Signup = (props) => {
       </div>
     {/* </div> */}
 
-      <Button id="mainBtn">Submit</Button>
+    {/* <Button id="mainBtn" type="submit" onClick={(e) => this.props.login(e, this.state.email, this.state.password)}>Sign Up</Button> */}
     </Form>
   );
 }
