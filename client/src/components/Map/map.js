@@ -9,36 +9,57 @@ import API from "../../utils/API";
 class Map extends Component {
   mapHandler = (event) => {
     console.log(data);
-    alert(event.target.dataset.name);
   };
 
   state = {
-    results: []
+    results: [],
+    fillColor: ""
   }
 
   componentDidMount() {
-    API.getResults().then(res => {
-      const electionResults = res.data;
-      // console.log(res.data)
-      const electionResultsWithWinner = electionResults.map((stateResults)=> {
-        let winner = {
-          name: "",
-          voteTotal: 0
-        }
+    ////loadingStuff();
+}
 
-        stateResults.candidates.forEach(candidate => {
-          if (winner.voteTotal < candidate.voteTotal) {
-            winner = candidate;
-          }
-        })
-        stateResults.winner = winner
-        return stateResults
+  loadingStuff() {
+  API.getResults().then(res => {
+    const electionResults = res.data;
+    let mapColors={}//props like TX: {fill: "BLUE"},
+    // console.log(res.data)
+    const electionResultsWithWinner = electionResults.map((stateResults)=> {
+      let winner = {
+        name: "",
+        color: "",
+        voteTotal: 0,
+      }
+      let colorMap = {
+      "Joe": "#983158",
+      "Amy": "#FFCCFF",
+      "Nick": "#00B050",
+      "Nelson": "#388FCE",
+      }
+
+      stateResults.candidates.forEach((candidate,index) => {
+        console.log(index,candidate)
+        candidate.color=colorMap[candidate.name]
+        if (winner.voteTotal < candidate.voteTotal) {
+          winner = candidate;
+          winner.color = candidate.color
+        }
       })
-      console.log(electionResultsWithWinner);
-      this.setState({ results: electionResultsWithWinner })
-    }).catch(err => {
-      console.log(err);
-    });
+      stateResults.winner = winner;
+      // this.setState({fillColor: winner.color});
+      return stateResults
+    })
+
+    console.log(electionResultsWithWinner);
+    //this.setState({ results: electionResultsWithWinner });
+
+  }).catch(err => {
+    console.log(err);
+  });
+}
+
+  changeStateColor = () => {
   }
 
 
@@ -61,6 +82,7 @@ class Map extends Component {
   render() {
     return (
       <div className="map">
+        <h1 onClick={this.loadingStuff}>CLICK ME!c</h1>
         <USAMap
           title={"TossUp"}
           customize={this.statesCustomConfig()}

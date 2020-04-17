@@ -9,8 +9,8 @@ import CandidatePage from "./Pages/CandidatePage.js";
 import ElectionPage from "./Pages/ElectionPage.js";
 import LoginPage from "./Pages/LoginPage.js";
 import ResultsPage from "./Pages/ResultsPage.js";
-import Axios from "axios";
-import { render } from "react-dom";
+// import Axios from "axios";
+// import { render } from "react-dom";
 
 class App extends Component {
   constructor() {
@@ -19,8 +19,8 @@ class App extends Component {
     this.state = {
       loggedIn: false,
       user: null,
-      email: "",
-      password: "",
+      // email: "",
+      // password: "",
     };
   }
 
@@ -31,7 +31,7 @@ class App extends Component {
       if (!!response.data.user) {
         this.setState({
           loggedIn: true,
-          user: response.data.user,
+          // user: response.data.user,
         });
       } else {
         this.setState({
@@ -53,10 +53,10 @@ class App extends Component {
     );
   };
 
-  login = (event) => {
-    event.preventDefault();
+  login = (e, email, password) => {
     console.log("login clicked");
-    API.login(this.state.email, this.state.password).then((response) => {
+    e.preventDefault();
+    API.login(email, password).then((response) => {
       console.log(response);
       if (response.status === 200) {
         // update the state
@@ -68,15 +68,16 @@ class App extends Component {
           // () => sessionStorage.setItem("token", response.data.token)
         );
       }
-    });
+    }).catch(err => this.setState({loggedIn : true}));
   };
 
-  handleInputChange = event => {
-    // Updating the input's state
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
+  // handleInputChange = event => {
+  //   event.preventDefault();
+  //   // Updating the input's state
+  //   this.setState({
+  //     [event.target.name]: event.target.value
+  //   });
+  // };
 
   render() {
     return (
@@ -85,8 +86,8 @@ class App extends Component {
           <div>
             <TopMenu user={this.state.user} logout={this.logout} />
             <Router>
-              {/* SETS THE HOME PAGE TO CANDIDATEPAGE WHEN USER IS LOGGED IN */}
-              <Route
+        //       SETS THE HOME PAGE TO CANDIDATEPAGE WHEN USER IS LOGGED IN 
+        //       <Route
                 exact
                 path="/"
                 component={() => <CandidatePage user={this.state.user} />}
@@ -114,7 +115,8 @@ class App extends Component {
           </Router>
         )}
         ;
-        <Footer />
+        <Footer /> 
+     
       </div>
     );
   }
