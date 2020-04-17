@@ -7,7 +7,7 @@ const Header = (props) => {
   return (
     <div>
       <Jumbotron fluid>
-        <Container fluid>
+        <Container fluid className="mainbkg">
           <h1 className="display-3" color="white"></h1>
           <p className="lead"></p>
         </Container>
