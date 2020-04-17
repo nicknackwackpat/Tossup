@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nicknackwackpat/Project3.git"
+    "url": "git+https://github.com/nicknackwackpat/Tossup.git"
   },
   "author": "Nelson",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nicknackwackpat/Project3/issues"
+    "url": "https://github.com/nicknackwackpat/Tossup/issues"
   },
-  "homepage": "https://github.com/nicknackwackpat/Project3#readme",
+  "homepage": "https://github.com/nicknackwackpat/Tossup#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",

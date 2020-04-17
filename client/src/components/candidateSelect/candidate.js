@@ -38,7 +38,7 @@ const onChangeHandler = (e)=>{
                     <div className="input-group-prepend"></div>
                     <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
                         {...props} />
@@ -52,7 +52,7 @@ const onChangeHandler = (e)=>{
                     <div className="input-group-prepend"></div>
                     <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
                         {...props} />
