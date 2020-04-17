@@ -8,7 +8,9 @@ function LoginPage(props) {
     <div>
     <Carousel />
     <br />
-    <LoginForm handleInputChange={props.handleInputChange} login={props.login} email={props.email} password={props.password} />  <SignupExpander />
+    <LoginForm handleInputChange={props.handleInputChange} login={props.login} email={props.email} password={props.password} />
+    <br />
+    <SignupExpander />
     </div>
   );
 }

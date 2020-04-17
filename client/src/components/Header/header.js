@@ -8,7 +8,6 @@ import {Row, Col } from 'reactstrap';
 const Header = (props) => {
   return (
     <div>
-<<<<<<< HEAD
       <Jumbotron fluid className="mainbkg">
         <Container>
         <Row>
@@ -22,12 +21,6 @@ const Header = (props) => {
           </Col>
       </Row>
 
-=======
-      <Jumbotron fluid>
-        <Container fluid className="mainbkg">
-          <h1 className="display-3" color="white">Welcome to TossUp!</h1>
-          <p className="lead">This is a p tag</p>
->>>>>>> 5c12cbf1f80127ff36e4165d339f9cc93ca002ef
         </Container>
       </Jumbotron>
       </div>
