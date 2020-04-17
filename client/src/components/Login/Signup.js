@@ -1,10 +1,11 @@
 // This file routes into Expander.js
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import "./login.css"
 
 const Signup = (props) => {
   return (
-    <Form style={{display:"flex", flexDirection:"column"}}>
+    <Form style={{display:"flex", flexDirection:"column", alignContent:"center"}}>
     <div id="formE" style={{display:"flex"}}>
       <FormGroup>
         <Label for="exampleFirstName" >First Name</Label>
@@ -26,18 +27,8 @@ const Signup = (props) => {
       </FormGroup>
       </div>
     {/* </div> */}
-      <FormGroup>
-        <Label for="exampleSelect">Select</Label>
-        <Input type="select" name="select" id="exampleSelect">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </Input>
-      </FormGroup>
-      
-      <Button>Submit</Button>
+
+    {/* <Button id="mainBtn" type="submit" onClick={(e) => this.props.login(e, this.state.email, this.state.password)}>Sign Up</Button> */}
     </Form>
   );
 }

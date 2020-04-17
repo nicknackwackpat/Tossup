@@ -43,20 +43,20 @@ app.use(passport.session()) // calls the deserializeUser
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/src"));
+  app.use(express.static("client/build"));
 }
 // Add routes, both API and view
 app.use(routes);
 
-// app.get("*", function(req, res) {
-//   res.sendFile(path.join(__dirname, "./client/src/index.html"));
-// });
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/src/index.html"));
+});
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/project3", {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true
+	useNewUrlParser: true,
+	useCreateIndex: true,
+	useUnifiedTopology: true
 })
 .then(() => console.log('MongoDB Connected!'))
 .catch(err => console.log(err))

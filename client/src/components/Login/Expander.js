@@ -7,7 +7,7 @@ import Signup from "./signup.js";
 // Expander for SignUp info; goes after login stuff
 const SignupExpander = () => (
   <div>
-    <Button color="primary" id="toggler" style={{ marginBottom: '1rem' }} onClick={() =>
+    <Button id="toggler" style={{ marginBottom: '1rem' }} onClick={() =>
       document.getElementById("formE").scrollIntoView({behavior:"smooth"})
     }>
       Sign Up!

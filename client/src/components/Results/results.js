@@ -1,13 +1,14 @@
 import React from "react";
 import API from "../../utils/API";
 import "./results.css";
+import { Link } from "react-router-dom";
+import {Row, Col } from 'reactstrap';
+// import { Message } from "./map.js"
 
-
-class ResultsPage extends React.Component {
+class Results extends React.Component {
     state = {
         usStates: [],
         sortOrder: ""
-
     };
 
     componentDidMount() {
@@ -34,51 +35,60 @@ class ResultsPage extends React.Component {
     render() {
         console.log(this.state.usStates)
         return (
-            <div>
+            <div class="container">
                 <table>
+                <h1>{this.state.message}</h1>
                     <thead>
-                        <tr>
-                            <th>States</th>
-                            <th>candidate 1</th>
-                            <th>candidate 2</th>
-                            <th>candidate 3</th>
-                            <th>candidate 4</th>
-                        </tr>
+                     <tr>
+                         <th>State</th>
+                         <th></th>
+                         <th></th>
+                         <th></th>
+                         <th></th>
+                     </tr>
                     </thead>
                     {<tbody>
                         {this.state.usStates &&
                             this.state.usStates.map((stateResult, i) => (
                                 <tr id="subHead" key={i}>
                                     <td>{stateResult.stateID}  </td>
-                                    <td>{stateResult.winner === 0 ?
-                                        <strong>{stateResult.candidates[0].name}</strong>
+                                    <td>{stateResult.winner === 0 ? 
+                                        <strong>{stateResult.candidates[0].name} <br />{stateResult.candidates[0].voteTotal}</strong>
                                         :
-                                        <>{stateResult.candidates[0].name}</>
+                                        <>{stateResult.candidates[0].name} <br />{stateResult.candidates[0].voteTotal}</>
                                     }</td>
-                                    <td>{stateResult.winner === 1 ?
-                                        <strong>{stateResult.candidates[1].name}</strong>
+                                   <td>{stateResult.winner === 1 ? 
+                                        <strong>{stateResult.candidates[1].name} <br />{stateResult.candidates[1].voteTotal}</strong>
                                         :
-                                        <>{stateResult.candidates[1].name}</>
+                                        <>{stateResult.candidates[1].name} <br />{stateResult.candidates[1].voteTotal}</>
                                     }</td>
-                                    <td>{stateResult.winner === 2 ?
-                                        <strong>{stateResult.candidates[2].name}</strong>
+                                    <td>{stateResult.winner === 2 ? 
+                                        <strong>{stateResult.candidates[2].name} <br />{stateResult.candidates[2].voteTotal}</strong>
                                         :
-                                        <>{stateResult.candidates[2].name}</>
+                                        <>{stateResult.candidates[2].name} <br />{stateResult.candidates[2].voteTotal}</>
                                     }</td>
-                                    <td>{stateResult.winner === 3 ?
-                                        <strong>{stateResult.candidates[3].name}</strong>
+                                    <td>{stateResult.winner === 3 ? 
+                                        <strong>{stateResult.candidates[3].name} <br />{stateResult.candidates[3].voteTotal}</strong>
                                         :
-                                        <>{stateResult.candidates[3].name}</>
+                                        <>{stateResult.candidates[3].name} <br />{stateResult.candidates[3].voteTotal}</>
                                     }</td>
                                 </tr>
                             ))}
                     </tbody>}
                 </table>
-                <button id="SaveNtn" type="button" class="btn btn-success">Save Results</button>
-                <button id="reset" type="button" class="btn btn-danger">New Sim</button>
+                <Row>
+      <Col xs="6" style={{alignContent:"center"}}>
+                <Link to="/"><button id="mainBtn" type="button" class="btn">Save Results</button></Link>
+                </Col>
+
+                <Col xs="6" style={{alignContent:"center"}}>        
+                <Link to="/">
+                <button id="secondaryBtn" type="button" class="btn">New Election</button></Link>
+                </Col>
+            </Row>
             </div>
         );
     }
 }
 
-export default ResultsPage;
+export default Results;

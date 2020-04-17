@@ -1,15 +1,16 @@
 const mongoose = require("mongoose");
 const db = require("../models");
-const data = require("../client/src/components/Map/data/us-states.json")
+const data = require("../../client/src/components/Map/data/us-states.json")
 
 const candidateArray = ["Amy", "Joe", "Nelson", "Nick"];
 
 mongoose.connect(
     process.env.MONGODB_URI ||
     "mongodb://localhost/project3", {
-    useNewUrlParser: true,
-    useFindAndModify: false
-}
+        useNewUrlParser: true,
+        useFindAndModify: false,
+        useUnifiedTopology: true
+    }
 );
 
 function shuffle(array) {
@@ -25,17 +26,18 @@ function shuffle(array) {
     }
 }
 
-const electionSeed = []
+const electionSeed = [];
 
 function vote(candidateArr) {
-
     for (state in data) {
-        let newState = {}
-        const stateID = data[state].abbreviation
-        newState.stateID = stateID
+        let newState = {};
+        const stateID = data[state].abbreviation;
+        newState.stateID = stateID;
         let totalPopulation = data[state].population
+
         newState.totalPopulation = totalPopulation
         newState.candidates = [];
+
         shuffle(candidateArr)
         candidateArr.forEach((candidate, i) => {
             newState.candidates.push({
@@ -47,19 +49,17 @@ function vote(candidateArr) {
         electionSeed.push(newState)
     };
 
-    console.log(electionSeed[10].candidates)
+    console.log(electionSeed.candidates)
 }
+
 vote(candidateArray)
 
 db.Election.deleteMany({})
     .then(() => db.Election.collection.insertMany(electionSeed))
     .then(data => {
-        console.log(data.result.n + " records inserted!");
-        //         for  (const doc of db.Election.collection.find({})) {  console.log(doc); // Prints documents one at a time
-
+         console.log(data.result.n + " records inserted!");    
         process.exit(0);
     })
-
     .catch(err => {
         console.error(err);
         process.exit(1);

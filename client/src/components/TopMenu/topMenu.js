@@ -38,7 +38,7 @@ const TopMenu= (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>Log in</NavbarText>
         </Collapse>
       </Navbar>
     </div>
