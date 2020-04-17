@@ -9,8 +9,8 @@ import CandidatePage from "./Pages/CandidatePage.js";
 import ElectionPage from "./Pages/ElectionPage.js";
 import LoginPage from "./Pages/LoginPage.js";
 import ResultsPage from "./Pages/ResultsPage.js";
-import Axios from "axios";
-import { render } from "react-dom";
+// import Axios from "axios";
+// import { render } from "react-dom";
 
 class App extends Component {
   constructor() {
@@ -85,8 +85,8 @@ class App extends Component {
           <div>
             <TopMenu user={this.state.user} logout={this.logout} />
             <Router>
-              {/* SETS THE HOME PAGE TO CANDIDATEPAGE WHEN USER IS LOGGED IN */}
-              <Route
+        //       SETS THE HOME PAGE TO CANDIDATEPAGE WHEN USER IS LOGGED IN 
+        //       <Route
                 exact
                 path="/"
                 component={() => <CandidatePage user={this.state.user} />}
@@ -114,7 +114,8 @@ class App extends Component {
           </Router>
         )}
         ;
-        <Footer />
+        <Footer /> 
+     
       </div>
     );
   }

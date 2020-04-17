@@ -1,13 +1,14 @@
 import React from 'react';
 import TopMenu from "../components/Navbar/navbar.js";
-import Header from "../components/Header/header.js";
+// import Header from "../components/Header/header.js";
 import Results from "../components/Results/results.js";
 
 
 
-function ResultsPage (){
+function ResultsPage () {
     return (
         <div>
+            <TopMenu />
             <Results />
         </div>
     );

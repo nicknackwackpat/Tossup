@@ -9,7 +9,6 @@ import API from "../../utils/API";
 class Map extends Component {
   mapHandler = (event) => {
     console.log(data);
-    alert(event);
   };
 
   state = {
@@ -18,39 +17,47 @@ class Map extends Component {
   }
 
   componentDidMount() {
-    API.getResults().then(res => {
-      const electionResults = res.data;
-      // console.log(res.data)
-      const electionResultsWithWinner = electionResults.map((stateResults)=> {
-        let winner = {
-          name: "",
-          color: "",
-          voteTotal: 0,
+    ////loadingStuff();
+}
+
+  loadingStuff() {
+  API.getResults().then(res => {
+    const electionResults = res.data;
+    let mapColors={}//props like TX: {fill: "BLUE"},
+    // console.log(res.data)
+    const electionResultsWithWinner = electionResults.map((stateResults)=> {
+      let winner = {
+        name: "",
+        color: "",
+        voteTotal: 0,
+      }
+      let colorMap = {
+      "Joe": "#983158",
+      "Amy": "#FFCCFF",
+      "Nick": "#00B050",
+      "Nelson": "#388FCE",
+      }
+
+      stateResults.candidates.forEach((candidate,index) => {
+        console.log(index,candidate)
+        candidate.color=colorMap[candidate.name]
+        if (winner.voteTotal < candidate.voteTotal) {
+          winner = candidate;
+          winner.color = candidate.color
         }
-
-        stateResults.candidates.forEach(candidate => {
-          stateResults.candidate[0].color = "#983158";
-          stateResults.candidate[1].color = "#E02459";
-          stateResults.candidate[2].color = "#08E14F";
-          stateResults.candidate[3].color = "#388FCE";
-
-          if (winner.voteTotal < candidate.voteTotal) {
-            winner = candidate;
-            winner.color = candidate.color
-          }
-        })
-        stateResults.winner = winner;
-        this.setState({fillColor: winner.color});
-        return stateResults
       })
+      stateResults.winner = winner;
+      // this.setState({fillColor: winner.color});
+      return stateResults
+    })
 
-      console.log(electionResultsWithWinner);
-      this.setState({ results: electionResultsWithWinner });
+    console.log(electionResultsWithWinner);
+    //this.setState({ results: electionResultsWithWinner });
 
-    }).catch(err => {
-      console.log(err);
-    });
-  }
+  }).catch(err => {
+    console.log(err);
+  });
+}
 
   changeStateColor = () => {
   }
@@ -75,9 +82,10 @@ class Map extends Component {
   render() {
     return (
       <div className="map">
+        <h1 onClick={this.loadingStuff}>CLICK ME!c</h1>
         <USAMap
           title={"TossUp"}
-          customize={this.componentDidMount()}
+          customize={this.statesCustomConfig()}
           onClick={this.mapHandler}
         />
       </div>
