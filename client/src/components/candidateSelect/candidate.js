@@ -50,11 +50,11 @@ const onChangeHandler = (e)=>{
                 <br />
 
 
-                <div class="input-group">
-                    <div class="input-group-prepend"></div>
+                <div className="input-group">
+                    <div className="input-group-prepend"></div>
                     <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
                         {...props} />
@@ -64,11 +64,11 @@ const onChangeHandler = (e)=>{
                 <br />
 
 
-                <div class="input-group">
-                    <div class="input-group-prepend"></div>
+                <div className="input-group">
+                    <div className="input-group-prepend"></div>
                     <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-default"
                         {...props} />
@@ -80,9 +80,9 @@ const onChangeHandler = (e)=>{
 
             <br />
 
-            <div class="row3">
-                <button {...props} type="button" class="btn btn-lg" id="startBtn" onClick={}>Let the vote begin</button>
 
+            <div className="row3">
+                <button {...props} type="button" className="btn btn-danger btn-lg" id="startBtn">Let the vote begin</button>
                 type="submit" onClick={() => ('/election'))}
             </div>
         </div>
