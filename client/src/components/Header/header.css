@@ -3,8 +3,27 @@
     color: 'white';
 }
 
-.mainbkg{
-    color: #341C54!important;
+/* .mainbkg{
+    background: #341C54;
+    color: white;
+} */
+
+.header-img{
+    max-height: 100px;
+    max-width: 100px
+}
+
+.header-right {
+    display: grid!important;
+    justify-content: right;
+    padding-right: 100px;
+}
+
+.header-style{
+    font-size: 84px!important; 
+    font-family: 'Barlow', sans-serif!important;
+    display: grid!important;
+    justify-content: left!important;
 }
 
 .secondary{

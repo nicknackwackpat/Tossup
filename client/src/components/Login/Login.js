@@ -17,7 +17,7 @@ class LoginForm extends React.Component {
 
   render() {
   return (
-    <Form inline>
+    <Form className="login-form">
       <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
       <Label for="exampleEmail" className="mr-sm-2">Email</Label>
         <Input onChange={this.handleInputChange} value={this.state.email} type="email" name="email" placeholder="something@idk.cool" />
@@ -26,7 +26,8 @@ class LoginForm extends React.Component {
         <Label for="examplePassword" className="mr-sm-2">Password</Label>
         <Input onChange={this.handleInputChange} value={this.state.password} name="password" id="examplePassword" placeholder="don't tell!" />
       </FormGroup>
-        <Button type="submit" onClick={(e) => this.props.login(e, this.state.email, this.state.password)}>Submit</Button>
+      <br />
+        <Button id="mainBtn" type="submit" onClick={(e) => this.props.login(e, this.state.email, this.state.password)}>Log In</Button>
     </Form>
       );  
     }

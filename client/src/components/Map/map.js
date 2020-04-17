@@ -26,7 +26,7 @@ class Map extends Component {
       .then((res) => {
         const electionResults = res.data;
         let mapColors = {}; //props like TX: {fill: "BLUE"},
-        // console.log(res.data)
+
         let overallVotes = {};
         const electionResultsWithWinner = electionResults.map(
           (stateResults) => {
@@ -44,7 +44,6 @@ class Map extends Component {
             };
 
             stateResults.candidates.forEach((candidate, index) => {
-              //console.log(index,candidate)
               if (overallVotes[candidate.name]) {
                 overallVotes[candidate.name] += candidate.voteTotal;
               } else {
@@ -57,7 +56,6 @@ class Map extends Component {
               }
             });
             stateResults.winner = winner;
-            // this.setState({fillColor: winner.color});
             return stateResults;
           }
         );
@@ -66,11 +64,10 @@ class Map extends Component {
         let max = 0;
         let electionWinner = "no one";
 
-        Object.keys(overallVotes).forEach((joker) => {
-          //his.setState({message: "the joker is "+joker})
-          if (overallVotes[joker] > max) {
-            electionWinner = joker;
-            max = overallVotes[joker];
+        Object.keys(overallVotes).forEach((elected) => {
+          if (overallVotes[elected] > max) {
+            electionWinner = elected;
+            max = overallVotes[elected];
           }
         });
         this.setState({

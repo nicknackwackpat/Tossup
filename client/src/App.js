@@ -110,7 +110,9 @@ class App extends Component {
             <Route
               exact
               path="/"
-              component={() => <LoginPage handleInputChange={this.handleInputChange} login={this.login} email={this.state.email} password={this.state.password} />}
+              component={() => <LoginPage handleInputChange={this.handleInputChange} login={this.login} email={this.state.email} password={this.state.password} 
+              
+              />}
             />
           </Router>
         )}
