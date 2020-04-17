@@ -86,8 +86,8 @@ class App extends Component {
           <div>
             {/* <TopMenu user={this.state.user} logout={this.logout} /> */}
             <Router>
-        //       SETS THE HOME PAGE TO CANDIDATEPAGE WHEN USER IS LOGGED IN 
-        //       <Route
+{/* SETS THE HOME PAGE TO CANDIDATEPAGE WHEN USER IS LOGGED IN  */}
+        <Route
                 exact
                 path="/"
                 component={() => <CandidatePage user={this.state.user} />}
@@ -116,7 +116,6 @@ class App extends Component {
         )}
         ;
         <Footer /> 
-     
       </div>
     );
   }
