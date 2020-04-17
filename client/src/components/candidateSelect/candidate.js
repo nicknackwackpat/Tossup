@@ -1,13 +1,14 @@
 import React from "react";
 import "./candidate.css";
 import { Table } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const Candidate = (props) => {
-  const onChangeHandler = (e) => {
-    e.preventDefault();
-    console.log(e.target.value);
-    console.log("clicked to go to elections");
-  };
+//   const onChangeHandler = (e) => {
+//     e.preventDefault();
+//     console.log(e.target.value);
+//     console.log("clicked to go to elections");
+//   };
 
   return (
     <div>
@@ -94,17 +95,16 @@ const Candidate = (props) => {
 
       <br />
       <div>
+          <Link to="/election">
         <button
-          {...props}
+        {...props}
           type="button"
-          className="btn mainbkg btn-lg"
-          id="startBtn"
-          onChangeHandler={"/election"}
-        >
-          Let the vote begin
+          className="btn primary btn-lg"
+          id="mainBtn">
+        Let the voting begin!
+          
         </button>
-
-        {/* type="submit" onClick={} */}
+        </Link>
       </div>
     </div>
   );
