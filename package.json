@@ -4,10 +4,6 @@
   "description": "",
   "main": "server.js",
   "private": true,
-  "engines": {
-    "npm": "6.13.4",
-    "node": "12.14.1"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
