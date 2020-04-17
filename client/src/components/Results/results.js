@@ -2,13 +2,13 @@ import React from "react";
 import API from "../../utils/API";
 import "./results.css";
 import { Link } from "react-router-dom";
-
+import {Row, Col } from 'reactstrap';
+// import { Message } from "./map.js"
 
 class Results extends React.Component {
     state = {
         usStates: [],
         sortOrder: ""
-
     };
 
     componentDidMount() {
@@ -63,6 +63,7 @@ class Results extends React.Component {
         return (
             <div class="container">
                 <table>
+                <h1>{this.state.message}</h1>
                     <thead>
                      <tr>
                          <th>State</th>
@@ -101,9 +102,16 @@ class Results extends React.Component {
                             ))}
                     </tbody> }
                 </table>
-                <button id="secondaryBtn" type="button" class="btn btn-success">Save Results</button>
+                <Row>
+      <Col xs="6" style={{alignContent:"center"}}>
+                <Link to="/"><button id="mainBtn" type="button" class="btn">Save Results</button></Link>
+                </Col>
+
+                <Col xs="6" style={{alignContent:"center"}}>        
                 <Link to="/">
-                <button id="secondaryBtn" type="button" class="btn btn-danger">New Election</button></Link>
+                <button id="secondaryBtn" type="button" class="btn">New Election</button></Link>
+                </Col>
+            </Row>
             </div>
         );
     }
