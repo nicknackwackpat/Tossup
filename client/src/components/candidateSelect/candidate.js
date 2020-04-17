@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./candidate.css";
 import { Table } from "reactstrap";
 
 const Candidate = (props) => {
@@ -18,7 +18,7 @@ const Candidate = (props) => {
             <tr>
               <th>#</th>
               <th>Candidate Name</th>
-              <th>Color </th>
+              <th>Color</th>
               {/* <th>Img</th> */}
             </tr>
           </thead>
@@ -35,7 +35,7 @@ const Candidate = (props) => {
                   />
               </td>
 
-              <td></td>
+              <td><img className="resize" src="https://i.imgur.com/s4TxpmS.png" alt="mauve#983158" /></td>
               {/* <td>Table cell</td> */}
             </tr>
 
@@ -52,7 +52,7 @@ const Candidate = (props) => {
                   />
                 </div>
               </td>
-              <td>Table cell</td>
+              <td><img className="resize" src="https://i.imgur.com/LqxyKK5.png" alt="pink#ffccff" /></td>
               {/* <td>Table cell</td> */}
             </tr>
 
@@ -67,7 +67,7 @@ const Candidate = (props) => {
                     {...props}
                   />
               </td>
-              <td>Table cell</td>
+              <td><img className="resize" src="https://i.imgur.com/mGkwTDl.png" alt="green#00b050" /></td>
               {/* <td>Table cell</td> */}
             </tr>
 
@@ -84,7 +84,7 @@ const Candidate = (props) => {
                   />
                 </div>
               </td>
-              <td>Table cell</td>
+              <td><img className="resize" src="https://i.imgur.com/OuVDomE.png" alt="blue##388fce" /></td>
               {/* <td>Table cell</td> */}
             </tr>
           </tbody>
@@ -97,7 +97,7 @@ const Candidate = (props) => {
         <button
           {...props}
           type="button"
-          className="btn primary btn-lg"
+          className="btn mainbkg btn-lg"
           id="startBtn"
           onChangeHandler={"/election"}
         >

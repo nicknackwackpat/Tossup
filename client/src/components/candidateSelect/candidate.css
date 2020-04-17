@@ -1,11 +1,16 @@
-  
+.resize {
+  max-height: 40px;
+  max-width: 40px
+}
+
+/*   
   .jumbotron {
     height: 220px;
     text-align: center;
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
-  }
+  } */
 
   #startBtn{
     margin-left: 540px;
