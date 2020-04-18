@@ -53,7 +53,7 @@ app.get("*", function(req, res) {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/project3", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://nicknackwackpat:Tossup123@ds161194.mlab.com:61194/heroku_kbcj2fj2", {
 	useNewUrlParser: true,
 	useCreateIndex: true,
 	useUnifiedTopology: true

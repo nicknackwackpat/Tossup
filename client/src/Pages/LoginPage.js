@@ -1,14 +1,10 @@
-import React from "react";
-<<<<<<< HEAD
+import React from "react";  
 import Carousel from "../components/Carousel/carousel.js"
 import LoginForm from "../components/Login/login.js"
 import SignupExpander from "../components/Login/expander.js"
 import Header from "../components/Header/header.js";
-=======
-import Header from "../components/Header/header.js"
-import LoginForm from "../../src/components/Login/Login.js"
-// import SignupExpander from "../components/Login/expander.js"
->>>>>>> c35e737bd39ec6ef4a0b657d2ff5fbee9bdff931
+import SignupExpander from "../components/Login/expander.js"
+
 
 function LoginPage(props) {
   return (
@@ -17,7 +13,7 @@ function LoginPage(props) {
     <br />
     <div className="container login-form">
     <LoginForm className="login-form" handleInputChange={props.handleInputChange} login={props.login} email={props.email} password={props.password} /> 
-  {/* <SignupExpander /> */}
+  <SignupExpander />
     </div>
     </div>
   );

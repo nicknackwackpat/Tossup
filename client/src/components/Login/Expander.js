@@ -2,7 +2,7 @@
 // It should be imported into the LoginPage, along with the nav and carousel. The four elements together are the sign up page.
 import React from "react";
 import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
-import Signup from "./signup.js";
+import Signup from "./Signup.js";
 
 // Expander for SignUp info; goes after login stuff
 const SignupExpander = () => (

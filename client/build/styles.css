@@ -5,13 +5,10 @@
 .header1 {
     font-family: 'Barlow', sans-serif;
     font-weight:800;
-    font-size: 48
 }
 
 .header-style{
     font-size: 60px!important;
-    font-family: 'Barlow', sans-serif;
-    font-weight:800
 }
 
 .mainbkg{
@@ -31,9 +28,6 @@
     color: #D5CFDB
 }
 
-.gradient-color{
-    color: 9C8CAC,
-}
 .accent {
     color: #386a73
 }
