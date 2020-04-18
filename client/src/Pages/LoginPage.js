@@ -1,7 +1,6 @@
 import React from "react";  
 import Carousel from "../components/Carousel/carousel.js"
 import LoginForm from "../components/Login/login.js"
-import SignupExpander from "../components/Login/expander.js"
 import Header from "../components/Header/header.js";
 import SignupExpander from "../components/Login/expander.js"
 

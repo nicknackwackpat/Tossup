@@ -1,4 +1,5 @@
 import React from "react";
+import {Row, Col } from 'reactstrap';
 import { Jumbotron, Container } from "reactstrap";
 
 // This is the header for all pages except the Home page!
