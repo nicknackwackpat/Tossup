@@ -13,6 +13,10 @@
     max-width: 100px
 }
 
+#grad {
+    background-image: linear-gradient(-90deg, #341C54, #9C8CAC)!important;
+  }
+
 .header-right {
     display: grid!important;
     justify-content: right;

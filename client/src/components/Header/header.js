@@ -8,7 +8,7 @@ import {Row, Col } from 'reactstrap';
 const Header = (props) => {
   return (
     <div>
-      <Jumbotron fluid className="mainbkg">
+      <Jumbotron fluid className="mainbkg" id="#grad">
         <Container>
         <Row>
           <Col xs="6" className="header-right">
