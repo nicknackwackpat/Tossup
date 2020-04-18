@@ -12,7 +12,7 @@ We have created a full stack app that implements the technologies of Passport, R
 
 ## Usage
 
-We have implemented a user verification via passport.The app verifys the user by name and email adress. After the user is verified, the user will pick up to 4 canidates to run throught the generator. The generator will run the 4 canidates thru each of the 50 states. Each states population are found from \***\*\_\_\_\_\*\*** . The generator gives everyone a vote and breaks down those votes to the 4 canidates. Then they are run through all 50 states and a winner is tallied and proclaimed victorious!
+We have implemented a user verification via passport.The app verifys the user by name and email adress. After the user is verified, the user will pick up to 4 canidates to run throught the generator. The generator will run the 4 canidates thru each of the 50 states. Each states population are found from Wikipedia . The generator gives everyone a vote and breaks down those votes to the 4 canidates. Then they are run through all 50 states and a winner is tallied and proclaimed victorious!
 
 ## Created By
 

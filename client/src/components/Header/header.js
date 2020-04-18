@@ -6,10 +6,21 @@ import { Jumbotron, Container } from "reactstrap";
 const Header = (props) => {
   return (
     <div>
-      <Jumbotron fluid>
-        <Container fluid>
-          <h1 className="display-3">Welcome To TossUp</h1>
-          <p className="lead">Please Log in !</p>
+      <Jumbotron fluid className="mainbkg">
+        <Container>
+        <Row>
+          <Col xs="6" className="header-right">
+          <img className="header-img" 
+          src="https://i.imgur.com/EQBHicX.png " alt="podium-guy" />
+          
+          </Col>
+          <Col xs="6">
+          <h1 className="header-style">TossUp!</h1>
+          <p className="lead"></p>
+
+          </Col>
+      </Row>
+
         </Container>
       </Jumbotron>
       </div>
