@@ -1,8 +1,8 @@
 import React from "react";  
 import Carousel from "../components/Carousel/carousel.js"
-import LoginForm from "../components/Login/login.js"
+import LoginForm from "../components/Login/Login.js"
 import Header from "../components/Header/header.js";
-import SignupExpander from "../components/Login/expander.js"
+import SignupExpander from "../components/Login/Expander.js"
 
 
 function LoginPage(props) {
