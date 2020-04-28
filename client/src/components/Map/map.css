@@ -1,0 +1,40 @@
+svg {
+    margin: auto;
+    padding: 30px 25px;;
+    display: flex;
+    justify-content: center;
+    height: 900px;
+    width: 1300px;
+}
+
+path {
+    pointer-events: all;
+  }
+
+path:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+h1 {
+  text-align: center;
+  }
+
+button {
+  background-color: #341C54;
+  color: white;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+/* path {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+path:hover {
+	fill-opacity: .7;
+} */

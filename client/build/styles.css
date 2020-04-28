@@ -1,0 +1,58 @@
+.document{
+    font-family: 'Barlow Extra Bold', sans-serif;
+}
+
+.header1 {
+    font-family: 'Barlow', sans-serif;
+    font-weight:800;
+    font-size: 84px
+}
+
+.header-style{
+    font-size: 60px!important;
+    font-family: 'Barlow', sans-serif;
+    font-weight:800
+}
+
+.mainbkg{
+    background: #341C54!important;
+    color: white;
+}
+
+.primary{
+    color: #341C54;
+}
+
+.secondary{
+    color: #e86a73
+}
+
+.background{
+    color: #D5CFDB
+}
+
+.gradient-color{
+    color: 9C8CAC,
+}
+.accent {
+    color: #386a73
+}
+
+#mainBtn {
+    background-color: #341C54;
+    color: white;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+}
+
+#secondaryBtn {
+    background-color: #E86A73;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,43 @@
+.font{
+    font-family: 'Barlow', sans-serif;
+    color: 'white';
+}
+
+/* .mainbkg{
+    background: #341C54;
+    color: white;
+} */
+
+.header-img{
+    max-height: 100px;
+    max-width: 100px
+}
+
+#grad {
+    background-image: linear-gradient(-90deg, #341C54, #9C8CAC)!important;
+  }
+
+.header-right {
+    display: grid!important;
+    justify-content: right;
+    padding-right: 100px;
+}
+
+.header-style{
+    font-size: 84px!important; 
+    font-family: 'Barlow', sans-serif!important;
+    display: grid!important;
+    justify-content: left!important;
+}
+
+.secondary{
+    color: #e86a73
+}
+
+.background{
+    color: #D5CFDB
+}
+
+.accent {
+    color: #386a73
+}
