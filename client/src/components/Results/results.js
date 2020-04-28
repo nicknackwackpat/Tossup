@@ -8,7 +8,7 @@ import {Row, Col } from 'reactstrap';
 class Results extends React.Component {
     state = {
         usStates: [],
-        sortOrder: ""
+        sortOrder: "ASC"
     };
 
     componentDidMount() {
@@ -31,28 +31,28 @@ class Results extends React.Component {
     }
 
 
-    //Sort States by Alphabetically (A-Z)
-    // sortByName = () => {
-    //     let sortedStates = this.state.States.sort((a, b) => {
-    //         if (b.name.first > a.name.first) {
-    //             return -1;
-    //         }
-    //         if (a.name.first > b.name.first) {
-    //             return 1;
-    //         }
+    // Sort States by Alphabetically (A-Z)
+    sortByName = () => {
+        let sortedStates = this.state.usStates.sort((a, b) => {
+            if (b.stateID > a.stateID) {
+                return -1;
+            }
+            if (a.stateID > b.stateID) {
+                return 1;
+            }
 
-    //         return 0;
-    //     });
+            return 0;
+        });
 
     // If descending, reverse with sortedStates.reverse()
-    // if (this.state.sortOrder === "DESC") {
-    //     sortedEmployees.reverse();
+    if (this.state.sortOrder === "DESC") {
+        sortedStates.reverse();
 
-    //     this.setState({ employees: sortedEmployees, sortOrder: "ASC" });
-    // } else {
-    //     this.setState({ employees: sortedEmployees, sortOrder: "DESC" });
-    // }
-    // };
+        this.setState({ usStates: sortedStates, sortOrder: "ASC" });
+    } else {
+        this.setState({ usStates: sortedStates, sortOrder: "DESC" });
+    }
+    };
 
 
 
@@ -61,12 +61,12 @@ class Results extends React.Component {
     render() {
         console.log(this.state.usStates)
         return (
-            <div class="container">
+            <div className="container">
                 <table>
                 <h1>{this.state.message}</h1>
                     <thead>
                      <tr>
-                         <th>State</th>
+                         <th onClick={this.sortByName}> State</th>
                          <th></th>
                          <th></th>
                          <th></th>
@@ -104,12 +104,12 @@ class Results extends React.Component {
                 </table>
                 <Row>
       <Col xs="6" style={{alignContent:"center"}}>
-                <Link to="/"><button id="mainBtn" type="button" class="btn">Save Results</button></Link>
+                <Link to="/"><button id="mainBtn" type="button" className="btn">Save Results</button></Link>
                 </Col>
 
                 <Col xs="6" style={{alignContent:"center"}}>        
                 <Link to="/">
-                <button id="secondaryBtn" type="button" class="btn">New Election</button></Link>
+                <button id="secondaryBtn" type="button" className="btn">New Election</button></Link>
                 </Col>
             </Row>
             </div>
