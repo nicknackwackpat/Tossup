@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 import {Row, Col } from 'reactstrap';
 // import { Message } from "./map.js"
 
+const winnerColor = {
+    color: 'green',
+    fontSize: 24
+}
+
 class Results extends React.Component {
     state = {
         usStates: [],
@@ -54,16 +59,13 @@ class Results extends React.Component {
     }
     };
 
-
-
-
     //This will render the results on the page
     render() {
         console.log(this.state.usStates)
         return (
             <div className="container">
-                <table>
                 <h1>{this.state.message}</h1>
+                <table>
                     <thead>
                      <tr>
                          <th onClick={this.sortByName}> State</th>
@@ -79,22 +81,22 @@ class Results extends React.Component {
                                 <tr id="subHead" key={i}>
                                     <td>{stateResult.stateID}  </td>
                                     <td>{stateResult.winner === 0 ? 
-                                        <strong>{stateResult.candidates[0].name} <br />{stateResult.candidates[0].voteTotal}</strong>
+                                        <strong style={winnerColor}>{stateResult.candidates[0].name} <br />{stateResult.candidates[0].voteTotal}</strong>
                                         :
                                         <>{stateResult.candidates[0].name} <br />{stateResult.candidates[0].voteTotal}</>
                                     }</td>
                                    <td>{stateResult.winner === 1 ? 
-                                        <strong>{stateResult.candidates[1].name} <br />{stateResult.candidates[1].voteTotal}</strong>
+                                        <strong style={winnerColor}>{stateResult.candidates[1].name} <br />{stateResult.candidates[1].voteTotal}</strong>
                                         :
                                         <>{stateResult.candidates[1].name} <br />{stateResult.candidates[1].voteTotal}</>
                                     }</td>
                                     <td>{stateResult.winner === 2 ? 
-                                        <strong>{stateResult.candidates[2].name} <br />{stateResult.candidates[2].voteTotal}</strong>
+                                        <strong style={winnerColor}>{stateResult.candidates[2].name} <br />{stateResult.candidates[2].voteTotal}</strong>
                                         :
                                         <>{stateResult.candidates[2].name} <br />{stateResult.candidates[2].voteTotal}</>
                                     }</td>
                                     <td>{stateResult.winner === 3 ? 
-                                        <strong>{stateResult.candidates[3].name} <br />{stateResult.candidates[3].voteTotal}</strong>
+                                        <strong style={winnerColor}>{stateResult.candidates[3].name} <br />{stateResult.candidates[3].voteTotal}</strong>
                                         :
                                         <>{stateResult.candidates[3].name} <br />{stateResult.candidates[3].voteTotal}</>
                                     }</td>

@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "./candidate.css";
 import { Table } from "reactstrap";
 import { Link } from "react-router-dom";
 
-const Candidate = (props) => {
+const Candidate = () => {
+  const [candidates, setCandidate] = useState({
+      candidateOne: "",
+      candidateTwo: "",
+      candidateThree: "",
+      candidateFour: ""
+    });
 //   const onChangeHandler = (e) => {
 //     e.preventDefault();
 //     console.log(e.target.value);
 //     console.log("clicked to go to elections");
 //   }; 
+
+console.log(candidates)
+
+const updateCandidates = event =>
+// console.log(event.target.value);
+setCandidate({
+  ...candidates,
+  [event.target.candidates]: event.target.value
+});
+
+const { candidateOne, candidateTwo, candidateThree, candidateFour } = candidates
 
   return (
     <div className="container">
@@ -28,11 +45,14 @@ const Candidate = (props) => {
               <th scope="row">1</th>
               <td>
                   <input
+                    value={candidateOne}
                     type="text"
                     className="form-control"
+                    name="candidateOne"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-default"
-                    {...props}
+                    onChange={e => updateCandidates(e.target.value)}
+                    // {...props}
                   />
               </td>
 
@@ -45,11 +65,14 @@ const Candidate = (props) => {
               <td>
             <div className="input-group">
                 <input
+                  value={candidateTwo}
                     type="text"
+                    name="candidateTwo"
                     className="form-control"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-default"
-                    {...props}
+                    onChange={e => updateCandidates(e.target.value)}
+                    // {...props}
                 />
                 </div>
               </td>
@@ -61,11 +84,14 @@ const Candidate = (props) => {
               <th scope="row">3</th>
               <td>
                   <input
+                    value={candidateThree}
                     type="text"
+                    name="candidateThree"
                     className="form-control"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-default"
-                    {...props}
+                    onChange={e => updateCandidates(e.target.value)}
+                    // {...props}
                   />
               </td>
               <td><img className="resize" src="https://i.imgur.com/mGkwTDl.png" alt="green#00b050" /></td>
@@ -77,11 +103,14 @@ const Candidate = (props) => {
               <td>
                 <div className="input-group-prepend">
                   <input
+                    value={candidateFour}
                     type="text"
+                    name="candidateFour"
                     className="form-control"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-default"
-                    {...props}
+                    onChange={e => updateCandidates(e.target.value)}
+                    // {...props}
                   />
                 </div>
               </td>
@@ -97,7 +126,7 @@ const Candidate = (props) => {
       <div>
           <Link to="/election">
         <button
-        {...props}
+        // {...props}
           type="button"
           className="btn primary btn-lg"
           id="mainBtn">

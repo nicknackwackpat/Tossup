@@ -5,7 +5,9 @@ import TopMenu from "../components/TopMenu/topMenu.js";
 
 // const [] = useState([])
 
-function CandidatePage (){
+function CandidatePage (props){
+
+
     return (
         <div>
     <TopMenu />
