@@ -9,8 +9,8 @@ const Footer = () => {
       <Nav>
         <>
         <h5>© 2020 TossUp! All Rights Reserved.</h5>
-          <NavLink href="https://www.usa.gov/register-to-vote">
-            <h4>Register To Vote</h4>
+          <NavLink href="https://www.usa.gov/register-to-vote" target="_blank" rel="noopener noreferrer">
+            <h5>Register To Vote here!</h5>
           </NavLink>
           
         </>
